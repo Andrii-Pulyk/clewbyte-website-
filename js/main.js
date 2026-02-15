@@ -1,5 +1,5 @@
 /* ============================================
-   Dabudinwst — main.js
+   ClewByte — main.js
    Анимации при скролле, мобильное меню, форма
    ============================================ */
 
@@ -58,6 +58,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    /* ----- Обфускация email от спам-ботов ----- */
+    (function () {
+        var user = 'info.floorisplan';
+        var domain = 'gmail.com';
+        var addr = user + '@' + domain;
+        document.querySelectorAll('.email-obfuscated').forEach(function (el) {
+            el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+        });
+        document.querySelectorAll('.email-obfuscated-text').forEach(function (el) {
+            el.textContent = addr;
+        });
+    })();
+
     /* ----- Контактная форма ----- */
     var contactForm = document.getElementById('contactForm');
     var formSuccess = document.getElementById('formSuccess');
@@ -66,15 +79,21 @@ document.addEventListener('DOMContentLoaded', function () {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
+            // Honeypot: если заполнено — это бот
+            var honeypot = document.getElementById('website');
+            if (honeypot && honeypot.value) {
+                return;
+            }
+
             // Здесь можно добавить отправку данных на сервер (fetch/AJAX)
-            // Пока — показываем сообщение об успехе
+            // Пока — показываем сообщение
             contactForm.reset();
 
             if (formSuccess) {
                 formSuccess.classList.add('visible');
                 setTimeout(function () {
                     formSuccess.classList.remove('visible');
-                }, 5000);
+                }, 7000);
             }
         });
     }
@@ -85,7 +104,10 @@ document.addEventListener('DOMContentLoaded', function () {
             var targetId = this.getAttribute('href');
             if (targetId === '#') return;
 
-            var target = document.querySelector(targetId);
+            // Валидация: только безопасные ID-селекторы
+            if (!/^#[a-zA-Z][a-zA-Z0-9_-]*$/.test(targetId)) return;
+
+            var target = document.getElementById(targetId.substring(1));
             if (target) {
                 e.preventDefault();
                 var headerHeight = document.querySelector('.header').offsetHeight;

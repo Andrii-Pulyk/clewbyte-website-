@@ -2,6 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Свяжитесь с Dabudinwst Sp. z o.o. — разработчиком FloorisPlan. Контактные данные и форма обратной связи.">
     <title>Контакты — Dabudinwst</title>
@@ -49,7 +53,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p><a href="mailto:info.floorisplan@gmail.com">info.floorisplan@gmail.com</a></p>
+                            <p><span class="email-obfuscated"></span></p>
                         </div>
                     </div>
 
@@ -92,23 +96,28 @@
                     <form class="form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Имя</label>
-                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" required minlength="2" maxlength="100" autocomplete="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required maxlength="254" autocomplete="email">
                         </div>
                         <div class="form-group">
                             <label for="subject">Тема</label>
-                            <input type="text" id="subject" name="subject" placeholder="Тема сообщения">
+                            <input type="text" id="subject" name="subject" placeholder="Тема сообщения" maxlength="200" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="message">Сообщение</label>
-                            <textarea id="message" name="message" placeholder="Ваше сообщение..." required></textarea>
+                            <textarea id="message" name="message" placeholder="Ваше сообщение..." required minlength="10" maxlength="5000" autocomplete="off"></textarea>
+                        </div>
+                        <!-- Honeypot: скрыто от пользователей, боты заполнят -->
+                        <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                         </div>
                         <button type="submit" class="btn btn-primary">Отправить сообщение</button>
                         <div class="form-success" id="formSuccess">
-                            Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
+                            Спасибо! Форма пока не подключена. Пожалуйста, отправьте сообщение на <span class="email-obfuscated"></span>.
                         </div>
                     </form>
                 </div>
@@ -140,8 +149,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2025 Dabudinwst Sp. z o.o. Все права защищены.</span>
-                <span>info.floorisplan@gmail.com</span>
+                <span>&copy; 2026 Dabudinwst Sp. z o.o. Все права защищены.</span>
+                <span class="email-obfuscated-text"></span>
             </div>
         </div>
     </footer>
