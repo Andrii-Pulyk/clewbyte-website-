@@ -623,6 +623,11 @@ ul {
     min-height: 140px;
 }
 
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
 .form-success {
     display: none;
     padding: 16px;
