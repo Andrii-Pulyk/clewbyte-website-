@@ -542,8 +542,17 @@ ul {
 }
 
 /* ============================================
-   КОНТАКТНАЯ ФОРМА
+   КОНТАКТЫ
    ============================================ */
+.contact-single-column {
+    padding-top: 40px;
+}
+
+.contact-cards {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
