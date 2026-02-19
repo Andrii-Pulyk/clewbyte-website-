@@ -655,6 +655,17 @@ ul {
     letter-spacing: -0.02em;
 }
 
+.privacy-content .lang-switch {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.privacy-content .lang-switch:hover {
+    color: #33d677;
+}
+
 .privacy-content .last-updated {
     color: var(--text-muted);
     font-size: 0.85rem;
