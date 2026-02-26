@@ -58,21 +58,23 @@
 
             <h2>2. What Data We Collect</h2>
 
-            <h3>2.1. Account Data</h3>
-            <p>When you register in the Application, we collect:</p>
+            <h3>2.1. User Profile Data</h3>
+            <p>The user may enter the following data in the Application settings:</p>
             <ul>
+                <li>Name</li>
                 <li>Email address</li>
-                <li>Username (if provided)</li>
-                <li>Authentication data (stored in encrypted form)</li>
+                <li>Company name</li>
+                <li>Company address</li>
+                <li>Phone number</li>
             </ul>
+            <p>This data is stored locally on the device within the Application's storage and is included in exported PDF and DXF files. The data is not transmitted to the Company's servers.</p>
 
             <h3>2.2. Analytics Data</h3>
-            <p>We use Firebase Analytics, Google Analytics, and Firebase Crashlytics to collect anonymous data about the use of the Application and to ensure its stability:</p>
+            <p>We use Firebase Analytics and Firebase Crashlytics to collect anonymous data about the use of the Application and to ensure its stability:</p>
             <ul>
                 <li>Device type, model, and operating system version</li>
                 <li>Language and regional settings</li>
                 <li>Actions within the Application (screen views, feature usage)</li>
-                <li>Device advertising identifier (Advertising ID)</li>
             </ul>
 
             <h3>2.3. Crash Data (Crashlytics)</h3>
@@ -86,15 +88,7 @@
             </ul>
             <p>Crashlytics does not collect personal data that can identify the user.</p>
 
-            <h3>2.4. Geolocation Data</h3>
-            <p>The Application may request access to your device's geolocation data for the following purposes:</p>
-            <ul>
-                <li>Linking floor plans to the property address</li>
-                <li>Improving user experience</li>
-            </ul>
-            <p>Access to geolocation is provided voluntarily. You can disable it in your device settings at any time.</p>
-
-            <h3>2.5. User Content</h3>
+            <h3>2.4. User Content</h3>
             <p>The Application stores data you create:</p>
             <ul>
                 <li>Floor plans and measurements</li>
@@ -102,13 +96,28 @@
                 <li>Engineering point markers (electrical, water, sewage, radiators)</li>
             </ul>
 
+            <h3>2.5. Voice Input (RECORD_AUDIO)</h3>
+            <p>The Application requests the RECORD_AUDIO permission for voice-controlled drawing. The audio stream is transmitted to Google Speech Recognition servers for speech recognition. Audio is not saved by the Application. The user can opt out of voice input and use manual input instead.</p>
+
+            <h3>2.6. Google Play Billing (Purchases)</h3>
+            <p>The Application offers subscriptions and one-time purchases through Google Play. Google processes payment data — the Application does not receive bank card details. The Application receives from Google: subscription status, purchase history, and purchase tokens. Learn more: <a href="https://play.google.com/about/privacy-security-deception" target="_blank" rel="noopener noreferrer">Google Play Policy</a>.</p>
+
+            <h3>2.7. Media Access (READ_MEDIA_IMAGES)</h3>
+            <p>The Application may request the READ_MEDIA_IMAGES permission to allow the user to import images when working with projects.</p>
+
+            <h3>2.8. System Data</h3>
+            <p>The Application reads the installation time to calculate the trial period (30 days) and the country/region from the device's system locale to determine access conditions.</p>
+
+            <h3>2.9. Data Export</h3>
+            <p>Exported PDF and DXF files contain the user's personal data (name, email, company, address, phone number) as specified in the profile. When sharing files through third-party applications (e.g., email, messengers), the user is solely responsible for their distribution.</p>
+
             <h2>3. Purposes of Data Processing</h2>
             <p>We process your data for the following purposes:</p>
             <ul>
                 <li>Providing and supporting the functionality of the Application</li>
-                <li>User account registration and management</li>
                 <li>Analyzing usage and improving the Application</li>
                 <li>Identifying and resolving technical errors</li>
+                <li>Processing purchases and subscriptions through Google Play</li>
                 <li>Communicating with users (support, updates)</li>
                 <li>Fulfilling legal obligations</li>
             </ul>
@@ -116,16 +125,15 @@
             <h2>4. Legal Basis for Processing</h2>
             <p>Personal data processing is carried out on the following grounds in accordance with the GDPR:</p>
             <ul>
-                <li><strong>Consent (Art. 6(1)(a) GDPR)</strong> — for geolocation and analytics data</li>
-                <li><strong>Performance of a contract (Art. 6(1)(b) GDPR)</strong> — for account data and service provision</li>
+                <li><strong>Consent (Art. 6(1)(a) GDPR)</strong> — for analytics, voice input, and media access</li>
+                <li><strong>Performance of a contract (Art. 6(1)(b) GDPR)</strong> — for service provision and purchase processing</li>
                 <li><strong>Legitimate interest (Art. 6(1)(f) GDPR)</strong> — for improving the Application and ensuring security</li>
             </ul>
 
             <h2>5. Data Sharing with Third Parties</h2>
             <p>We may share data with the following categories of recipients:</p>
             <ul>
-                <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Google Analytics, and Firebase Crashlytics (servers may be located outside the EEA; transfers are carried out based on Standard Contractual Clauses)</li>
-                <li><strong>Hosting providers</strong> — for storing account data</li>
+                <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Firebase Crashlytics, Google Speech Recognition, and Google Play Billing (servers may be located outside the EEA; transfers are carried out based on Standard Contractual Clauses)</li>
                 <li><strong>Government authorities</strong> — in cases provided for by law</li>
             </ul>
             <p>We do not sell your personal data to third parties.</p>
@@ -133,10 +141,10 @@
             <h2>6. Data Retention</h2>
             <p>We retain your personal data for as long as necessary for the purposes described in this Policy:</p>
             <ul>
-                <li>Account data — until the account is deleted</li>
+                <li>User profile data — stored locally on the device until the Application is uninstalled by the user</li>
                 <li>Analytics data — up to 26 months (default Firebase Analytics settings)</li>
                 <li>Crash data (Crashlytics) — up to 90 days</li>
-                <li>Geolocation data — not stored on our servers on a permanent basis</li>
+                <li>Purchase data — in accordance with Google Play policy</li>
             </ul>
 
             <h2>7. Your Rights</h2>
@@ -144,7 +152,7 @@
             <ul>
                 <li><strong>Right of access</strong> — to obtain information about your data that we process</li>
                 <li><strong>Right to rectification</strong> — to correct inaccurate or incomplete data</li>
-                <li><strong>Right to erasure</strong> — to request deletion of your data</li>
+                <li><strong>Right to erasure</strong> — delete local data by uninstalling the Application or clearing its data through device settings</li>
                 <li><strong>Right to restriction of processing</strong> — to restrict data processing</li>
                 <li><strong>Right to data portability</strong> — to receive your data in a machine-readable format</li>
                 <li><strong>Right to object</strong> — to object to data processing based on legitimate interest</li>
@@ -156,7 +164,7 @@
             <p>We implement technical and organizational measures to protect your personal data from unauthorized access, alteration, disclosure, or destruction. This includes:</p>
             <ul>
                 <li>Data encryption in transit (TLS/SSL)</li>
-                <li>Secure storage of credentials</li>
+                <li>Local data is stored in the Application's protected storage, accessible only to the Application itself (Android App Sandbox)</li>
                 <li>Restricted access to personal data</li>
                 <li>Regular security audits</li>
             </ul>
