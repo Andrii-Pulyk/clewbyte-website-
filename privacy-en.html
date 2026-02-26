@@ -40,7 +40,7 @@
     <main class="privacy-content container">
         <h1 class="fade-in">Privacy Policy</h1>
         <a href="privacy.html" class="lang-switch fade-in">Русская версия →</a>
-        <p class="last-updated fade-in">Last updated: February 15, 2026</p>
+        <p class="last-updated fade-in">Last updated: February 26, 2026</p>
 
         <div class="fade-in delay-1">
             <p>This Privacy Policy describes how Dabudinwst Sp. z o.o. (hereinafter referred to as the "Company", "we") collects, uses, and protects the personal data of users of the FloorisPlan mobile application (hereinafter referred to as the "Application").</p>
@@ -67,16 +67,26 @@
             </ul>
 
             <h3>2.2. Analytics Data</h3>
-            <p>We use Firebase Analytics and Google Analytics to collect anonymous data about the use of the Application:</p>
+            <p>We use Firebase Analytics, Google Analytics, and Firebase Crashlytics to collect anonymous data about the use of the Application and to ensure its stability:</p>
             <ul>
                 <li>Device type, model, and operating system version</li>
                 <li>Language and regional settings</li>
                 <li>Actions within the Application (screen views, feature usage)</li>
-                <li>Application performance and error data</li>
                 <li>Device advertising identifier (Advertising ID)</li>
             </ul>
 
-            <h3>2.3. Geolocation Data</h3>
+            <h3>2.3. Crash Data (Crashlytics)</h3>
+            <p>Firebase Crashlytics automatically collects the following information when a crash or error occurs in the Application:</p>
+            <ul>
+                <li>Stack traces and exception information</li>
+                <li>Crashlytics installation ID (a unique UUID for the app instance)</li>
+                <li>Device model, OS version, and screen orientation</li>
+                <li>Amount of RAM and disk space</li>
+                <li>Device state at the time of the crash (charging, background/foreground)</li>
+            </ul>
+            <p>Crashlytics does not collect personal data that can identify the user.</p>
+
+            <h3>2.4. Geolocation Data</h3>
             <p>The Application may request access to your device's geolocation data for the following purposes:</p>
             <ul>
                 <li>Linking floor plans to the property address</li>
@@ -84,7 +94,7 @@
             </ul>
             <p>Access to geolocation is provided voluntarily. You can disable it in your device settings at any time.</p>
 
-            <h3>2.4. User Content</h3>
+            <h3>2.5. User Content</h3>
             <p>The Application stores data you create:</p>
             <ul>
                 <li>Floor plans and measurements</li>
@@ -114,7 +124,7 @@
             <h2>5. Data Sharing with Third Parties</h2>
             <p>We may share data with the following categories of recipients:</p>
             <ul>
-                <li><strong>Google LLC</strong> — as part of using Firebase Analytics and Google Analytics (servers may be located outside the EEA; transfers are carried out based on Standard Contractual Clauses)</li>
+                <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Google Analytics, and Firebase Crashlytics (servers may be located outside the EEA; transfers are carried out based on Standard Contractual Clauses)</li>
                 <li><strong>Hosting providers</strong> — for storing account data</li>
                 <li><strong>Government authorities</strong> — in cases provided for by law</li>
             </ul>
@@ -125,6 +135,7 @@
             <ul>
                 <li>Account data — until the account is deleted</li>
                 <li>Analytics data — up to 26 months (default Firebase Analytics settings)</li>
+                <li>Crash data (Crashlytics) — up to 90 days</li>
                 <li>Geolocation data — not stored on our servers on a permanent basis</li>
             </ul>
 
@@ -154,7 +165,7 @@
             <p>The Application is not intended for persons under 16 years of age. We do not knowingly collect children's data. If you discover that a child has provided us with their data, please contact us to have it deleted.</p>
 
             <h2>10. Cookies and Similar Technologies</h2>
-            <p>The Application may use similar technologies (Firebase SDK, device identifiers) to ensure proper functioning of analytics. You can manage these settings through your device parameters.</p>
+            <p>The Application may use similar technologies (Firebase SDK, Firebase Crashlytics SDK, device identifiers) to ensure proper functioning of analytics and crash reporting. You can manage these settings through your device parameters.</p>
 
             <h2>11. Changes to This Policy</h2>
             <p>We reserve the right to update this Privacy Policy. We will notify you of changes through the Application or by email. We recommend periodically reviewing this page.</p>
