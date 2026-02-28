@@ -47,6 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 a {
@@ -432,6 +433,7 @@ ul {
     padding: 140px 0 80px;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .app-hero::before {
@@ -881,7 +883,7 @@ ul {
     .nav {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 280px;
         height: 100vh;
         background: var(--bg-secondary);
@@ -890,11 +892,12 @@ ul {
         gap: 24px;
         padding: 40px;
         border-left: 1px solid var(--border-color);
-        transition: right var(--transition);
+        transform: translateX(100%);
+        transition: transform var(--transition);
     }
 
     .nav.open {
-        right: 0;
+        transform: translateX(0);
     }
 
     .nav a {
