@@ -192,6 +192,10 @@ ul {
     overflow: hidden;
 }
 
+.hero-compact {
+    padding-bottom: 40px;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -310,12 +314,16 @@ ul {
     margin-right: auto;
 }
 
+.section-alt {
+    background: var(--bg-secondary);
+}
+
 /* ============================================
    КАРТОЧКИ (продукты, функции)
    ============================================ */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 24px;
 }
 
@@ -360,6 +368,16 @@ ul {
 .card p {
     color: var(--text-secondary);
     font-size: 0.92rem;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-details {
+    display: inline-flex;
+    margin-top: 8px;
 }
 
 /* Большая карточка продукта */
@@ -469,7 +487,7 @@ ul {
 
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
     gap: 20px;
 }
 
