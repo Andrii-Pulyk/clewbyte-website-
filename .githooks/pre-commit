@@ -1,4 +1,4 @@
 #!/bin/sh
 # Auto-build site before commit
 npm run build
-git add dist/
+git add index.html floorisplan.html contact.html privacy.html privacy-en.html ru/ css/ js/ images/

@@ -3,7 +3,7 @@ const path = require('path');
 const config = require('./build-config');
 
 const SRC = path.join(__dirname, 'src');
-const DIST = path.join(__dirname, 'dist');
+const DIST = __dirname; // Output to repo root for GitHub Pages
 const I18N_DIR = path.join(SRC, 'i18n');
 const TEMPLATES_DIR = path.join(SRC, 'templates');
 const PARTIALS_DIR = path.join(TEMPLATES_DIR, 'partials');
@@ -152,13 +152,17 @@ function loadPageContent(pageSlug, lang) {
   return '';
 }
 
-// ─── 5. Clean dist ─────────────────────────────────────────────────────────────
+// ─── 5. Clean output files ──────────────────────────────────────────────────────
 
-function cleanDir(dir) {
-  if (fs.existsSync(dir)) {
-    fs.rmSync(dir, { recursive: true });
+function cleanOutput() {
+  // Remove only generated language subdirs (e.g. /ru/)
+  for (const lang of languages) {
+    if (lang === config.defaultLang) continue;
+    const langDir = path.join(DIST, lang);
+    if (fs.existsSync(langDir)) {
+      fs.rmSync(langDir, { recursive: true });
+    }
   }
-  fs.mkdirSync(dir, { recursive: true });
 }
 
 // ─── 6. Copy static assets ────────────────────────────────────────────────────
@@ -178,7 +182,7 @@ function copyDirRecursive(src, dest) {
 
 // ─── 7. Build ──────────────────────────────────────────────────────────────────
 
-cleanDir(DIST);
+cleanOutput();
 
 let pagesGenerated = 0;
 
@@ -268,4 +272,4 @@ copyDirRecursive(path.join(SRC, 'js'), path.join(DIST, 'js'));
 copyDirRecursive(path.join(SRC, 'images'), path.join(DIST, 'images'));
 
 console.log(`\nBuild complete: ${pagesGenerated} pages generated for ${languages.length} languages.`);
-console.log(`Static assets copied to dist/`);
+console.log(`Static assets copied.`);
