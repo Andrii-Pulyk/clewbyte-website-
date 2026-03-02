@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en_US",
+    "dir": "ltr"
+  },
+
+  "nav": {
+    "home": "Home",
+    "floorisplan": "FloorisPlan",
+    "contacts": "Contacts",
+    "menu_aria": "Menu"
+  },
+
+  "footer": {
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "privacy_policy": "Privacy Policy",
+    "copyright": "&copy; 2026 Dabudinwst Sp. z o.o. All rights reserved.",
+    "brand_description": "Dabudinwst Sp. z o.o. — professional mobile application development."
+  },
+
+  "index": {
+    "title": "ClewByte — App Development",
+    "meta_description": "ClewByte — IT company developing professional mobile applications.",
+    "hero_title": "We create <span class=\"accent\">apps</span><br>that work",
+    "hero_subtitle": "ClewByte — digital tools for professionals.",
+    "hero_cta_products": "Our products",
+    "hero_cta_contact": "Contact us",
+    "products_title": "Our products",
+    "products_subtitle": "Applications that help professionals work faster and more accurately",
+    "product_badge": "In development",
+    "product_name": "FloorisPlan",
+    "product_description": "Professional room measurement app. Create floor plans, wall elevations, mark electrical and plumbing points — all in one tool.",
+    "product_details": "Learn more →",
+    "about_title": "About the company",
+    "about_subtitle": "We build tools you can rely on",
+    "about_text_1": "ClewByte is the IT division of Dabudinwst Sp. z o.o., specializing in mobile app development for professionals. We believe that great software should be simple, reliable, and useful.",
+    "about_text_2": "Our team focuses on creating tools that solve real problems in the daily work of designers, builders, and craftsmen.",
+    "about_text_3": "The company is registered in Warsaw, Poland. We work remotely and build products for the international market.",
+    "about_details_title": "Company details",
+    "about_label_company": "Company",
+    "about_label_nip": "NIP",
+    "about_label_regon": "REGON",
+    "about_label_duns": "DUNS",
+    "about_label_address": "Address"
+  },
+
+  "floorisplan": {
+    "title": "FloorisPlan — Room Measurement App",
+    "meta_description": "FloorisPlan — professional room measurement app. Floor plans, wall elevations, electrical and plumbing points.",
+    "badge": "In development",
+    "hero_title": "FloorisPlan",
+    "hero_tagline": "Professional room measurement tool. Create floor plans with wall elevations right on site.",
+    "hero_cta": "Coming soon to Google Play",
+    "audience_title": "Who is this app for",
+    "audience_subtitle": "FloorisPlan is built for those who work with measurements every day",
+    "audience_designers_title": "Interior designers",
+    "audience_designers_desc": "Quickly create floor plans for design projects. All measurements in one place.",
+    "audience_foremen_title": "Foremen",
+    "audience_foremen_desc": "Control room dimensions, utility placement, and work volumes on site.",
+    "audience_masters_title": "Craftsmen",
+    "audience_masters_desc": "Record measurements, electrical and plumbing connection points. Everything at hand, right on your phone.",
+    "features_title": "Features",
+    "features_subtitle": "A complete set of tools for professional measurement",
+    "feature_rooms_title": "Room creation",
+    "feature_rooms_desc": "Draw rooms in top-down view. Set exact wall dimensions by voice.",
+    "feature_openings_title": "Connecting through openings",
+    "feature_openings_desc": "Connect rooms through doorways. Link spaces into a unified plan.",
+    "feature_moving_title": "Room repositioning",
+    "feature_moving_desc": "Freely move rooms on the plan. Build precise layouts.",
+    "feature_walls_title": "Wall elevations",
+    "feature_walls_desc": "Automatic wall elevations for each room. See every wall in detail.",
+    "feature_points_title": "Electrical & plumbing points",
+    "feature_points_desc": "Mark outlets, switches, water supply, sewage, and radiator points.",
+    "feature_inventory_title": "Complete inventory",
+    "feature_inventory_desc": "Get a full measurement plan with elevations — a ready-to-use document.",
+    "feature_voice_title": "Voice mode",
+    "feature_voice_desc": "Draw rooms by voice — dictate dimensions while your hands are busy with the tape measure.",
+    "screenshots_title": "Screenshots",
+    "screenshots_subtitle": "The app is under development. Screenshots will appear later.",
+    "screenshot_placeholder": "Screenshot",
+    "cta_title": "Coming soon to Google Play",
+    "cta_subtitle": "We are working on the first version of FloorisPlan. Stay tuned for updates.",
+    "cta_soon": "Coming soon to Google Play",
+    "cta_contact": "Contact us"
+  },
+
+  "contact": {
+    "title": "Contacts — ClewByte",
+    "meta_description": "Contact Dabudinwst Sp. z o.o. — the developer of FloorisPlan. Contact details.",
+    "hero_title": "Get <span class=\"accent\">in touch</span>",
+    "hero_subtitle": "Have questions or suggestions? We are always open for communication.",
+    "email_label": "Email",
+    "address_label": "Address",
+    "address_value": "Hoża 86 lok. 410<br>00-682 Warszawa, Polska",
+    "details_label": "Company details",
+    "details_value": "Dabudinwst Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
+  },
+
+  "privacy": {
+    "title": "Privacy Policy — FloorisPlan",
+    "meta_description": "Privacy Policy for the FloorisPlan application — Dabudinwst Sp. z o.o.",
+    "h1": "Privacy Policy",
+    "lang_switch_text": "Русская версия →",
+    "last_updated": "Last updated: February 26, 2026"
+  }
+}

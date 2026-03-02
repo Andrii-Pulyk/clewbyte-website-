@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "lang": "ru",
+    "locale": "ru_RU",
+    "dir": "ltr"
+  },
+
+  "nav": {
+    "home": "Главная",
+    "floorisplan": "FloorisPlan",
+    "contacts": "Контакты",
+    "menu_aria": "Меню"
+  },
+
+  "footer": {
+    "navigation": "Навигация",
+    "legal": "Правовая информация",
+    "privacy_policy": "Политика конфиденциальности",
+    "copyright": "&copy; 2026 Dabudinwst Sp. z o.o. Все права защищены.",
+    "brand_description": "Dabudinwst Sp. z o.o. — разработка профессиональных мобильных приложений."
+  },
+
+  "index": {
+    "title": "ClewByte — Разработка приложений",
+    "meta_description": "ClewByte — IT-компания, разрабатывающая профессиональные мобильные приложения.",
+    "hero_title": "Создаём <span class=\"accent\">приложения</span>,<br>которые работают",
+    "hero_subtitle": "ClewByte — цифровые инструменты для специалистов.",
+    "hero_cta_products": "Наши продукты",
+    "hero_cta_contact": "Связаться с нами",
+    "products_title": "Наши продукты",
+    "products_subtitle": "Приложения, которые помогают профессионалам работать быстрее и точнее",
+    "product_badge": "В разработке",
+    "product_name": "FloorisPlan",
+    "product_description": "Профессиональное приложение для замера помещений. Создавайте планы комнат, развёртки стен, отмечайте точки электрики и сантехники — всё в одном инструменте.",
+    "product_details": "Подробнее →",
+    "about_title": "О компании",
+    "about_subtitle": "Мы создаём инструменты, на которые можно положиться",
+    "about_text_1": "ClewByte — IT-подразделение компании Dabudinwst Sp. z o.o., специализирующееся на разработке мобильных приложений для профессионалов. Мы верим, что хорошее программное обеспечение должно быть простым, надёжным и полезным.",
+    "about_text_2": "Наша команда фокусируется на создании инструментов, которые решают реальные задачи в повседневной работе дизайнеров, строителей и мастеров.",
+    "about_text_3": "Компания зарегистрирована в Варшаве, Польша. Мы работаем удалённо и создаём продукты для международного рынка.",
+    "about_details_title": "Реквизиты",
+    "about_label_company": "Компания",
+    "about_label_nip": "NIP",
+    "about_label_regon": "REGON",
+    "about_label_duns": "DUNS",
+    "about_label_address": "Адрес"
+  },
+
+  "floorisplan": {
+    "title": "FloorisPlan — Приложение для замера помещений",
+    "meta_description": "FloorisPlan — профессиональное приложение для замера помещений. Планы комнат, развёртки стен, точки электрики и сантехники.",
+    "badge": "В разработке",
+    "hero_title": "FloorisPlan",
+    "hero_tagline": "Профессиональный инструмент для замера помещений. Создавайте обмерные планы с развёртками стен прямо на объекте.",
+    "hero_cta": "Скоро в Google Play",
+    "audience_title": "Для кого это приложение",
+    "audience_subtitle": "FloorisPlan создан для тех, кто работает с замерами каждый день",
+    "audience_designers_title": "Дизайнеры интерьера",
+    "audience_designers_desc": "Быстро создавайте обмерные планы помещений для дизайн-проектов. Все замеры — в одном месте.",
+    "audience_foremen_title": "Прорабы",
+    "audience_foremen_desc": "Контролируйте размеры помещений, размещение инженерных сетей и объёмы работ на объекте.",
+    "audience_masters_title": "Мастера",
+    "audience_masters_desc": "Фиксируйте замеры, точки подключения электрики и сантехники. Всё под рукой, прямо в телефоне.",
+    "features_title": "Возможности",
+    "features_subtitle": "Полный набор инструментов для профессионального обмера",
+    "feature_rooms_title": "Создание комнат",
+    "feature_rooms_desc": "Рисуйте комнаты в виде сверху. Задавайте точные размеры стен голосом.",
+    "feature_openings_title": "Соединение через проёмы",
+    "feature_openings_desc": "Соединяйте комнаты в дверных проемах. Связывайте помещения в единый план.",
+    "feature_moving_title": "Перемещение комнат",
+    "feature_moving_desc": "Свободно двигайте комнаты на плане. Выстраивайте точную компоновку помещений.",
+    "feature_walls_title": "Развёртка стен",
+    "feature_walls_desc": "Автоматическая развёртка стен для каждой комнаты. Видите каждую стену в деталях.",
+    "feature_points_title": "Точки электрики и воды",
+    "feature_points_desc": "Отмечайте розетки, выключатели, точки водоснабжения, канализации и радиаторы.",
+    "feature_inventory_title": "Полная инвентаризация",
+    "feature_inventory_desc": "Получайте полный обмерный план с развёртками — готовый документ для работы.",
+    "feature_voice_title": "Голосовой режим",
+    "feature_voice_desc": "Чертите комнаты голосом — диктуйте размеры, пока руки заняты рулеткой.",
+    "screenshots_title": "Скриншоты",
+    "screenshots_subtitle": "Приложение находится в разработке. Скриншоты появятся позже.",
+    "screenshot_placeholder": "Скриншот",
+    "cta_title": "Скоро в Google Play",
+    "cta_subtitle": "Мы работаем над первой версией FloorisPlan. Следите за обновлениями.",
+    "cta_soon": "Скоро в Google Play",
+    "cta_contact": "Написать нам"
+  },
+
+  "contact": {
+    "title": "Контакты — ClewByte",
+    "meta_description": "Свяжитесь с Dabudinwst Sp. z o.o. — разработчиком FloorisPlan. Контактные данные.",
+    "hero_title": "Свяжитесь <span class=\"accent\">с нами</span>",
+    "hero_subtitle": "Есть вопросы или предложения? Мы всегда открыты для общения.",
+    "email_label": "Email",
+    "address_label": "Адрес",
+    "address_value": "Hoża 86 lok. 410<br>00-682 Warszawa, Polska",
+    "details_label": "Реквизиты",
+    "details_value": "Dabudinwst Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
+  },
+
+  "privacy": {
+    "title": "Политика конфиденциальности — FloorisPlan",
+    "meta_description": "Политика конфиденциальности приложения FloorisPlan — Dabudinwst Sp. z o.o.",
+    "h1": "Политика конфиденциальности",
+    "lang_switch_text": "English version →",
+    "last_updated": "Последнее обновление: 26 февраля 2026 г."
+  }
+}

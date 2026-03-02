@@ -1,0 +1,89 @@
+{{> head}}
+<body>
+
+{{> header}}
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">{{page.hero_title}}</h1>
+            <p class="fade-in delay-1">{{page.hero_subtitle}}</p>
+            <div class="btn-group fade-in delay-2">
+                <a href="#products" class="btn btn-primary">{{page.hero_cta_products}}</a>
+                <a href="{{_nav_contacts_url}}" class="btn btn-secondary">{{page.hero_cta_contact}}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="section" id="products">
+        <div class="container section-center">
+            <h2 class="section-title fade-in">{{page.products_title}}</h2>
+            <p class="section-subtitle fade-in delay-1">{{page.products_subtitle}}</p>
+
+            <a href="{{_nav_floorisplan_url}}" class="product-card-link">
+                <div class="product-card fade-in delay-2">
+                    <div class="product-card-image">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#555" stroke-width="1.5">
+                            <rect x="8" y="8" width="48" height="48" rx="4"/>
+                            <line x1="8" y1="32" x2="56" y2="32"/>
+                            <line x1="32" y1="8" x2="32" y2="56"/>
+                            <rect x="14" y="14" width="14" height="14" stroke="#00C853" stroke-dasharray="3 2"/>
+                            <rect x="36" y="36" width="14" height="14" stroke="#00C853" stroke-dasharray="3 2"/>
+                        </svg>
+                    </div>
+                    <div class="product-card-content">
+                        <span class="product-badge badge-dev">{{page.product_badge}}</span>
+                        <h3>{{page.product_name}}</h3>
+                        <p>{{page.product_description}}</p>
+                        <span class="btn btn-secondary btn-details">{{page.product_details}}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">{{page.about_title}}</h2>
+            <p class="section-subtitle fade-in delay-1">{{page.about_subtitle}}</p>
+
+            <div class="about-grid">
+                <div class="about-text fade-in-left">
+                    <p>{{page.about_text_1}}</p>
+                    <p>{{page.about_text_2}}</p>
+                    <p>{{page.about_text_3}}</p>
+                </div>
+                <div class="company-details fade-in-right">
+                    <h3>{{page.about_details_title}}</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">{{page.about_label_company}}</span>
+                        <span class="detail-value">Dabudinwst Sp. z o.o.</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">{{page.about_label_nip}}</span>
+                        <span class="detail-value">1133056595</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">{{page.about_label_regon}}</span>
+                        <span class="detail-value">521795720</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">{{page.about_label_duns}}</span>
+                        <span class="detail-value">674538122</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">{{page.about_label_address}}</span>
+                        <span class="detail-value">Hoża 86 lok. 410,<br>00-682 Warszawa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{> footer}}
+
+    <script src="{{_assets}}js/main.js"></script>
+</body>
+</html>

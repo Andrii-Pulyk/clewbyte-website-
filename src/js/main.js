@@ -121,4 +121,45 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    /* ----- Active nav link detection ----- */
+    (function () {
+        var currentPath = window.location.pathname;
+        // Normalize: remove trailing slash for comparison, but keep /
+        var navLinks = document.querySelectorAll('.nav a:not(.lang-toggle-mobile), .footer-links a');
+        navLinks.forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (!href) return;
+            // Resolve relative href to absolute path
+            var linkPath = new URL(href, window.location.origin).pathname;
+            // Match: exact path, or / matches /index.html
+            var isActive = currentPath === linkPath
+                || (currentPath === '/' && linkPath === '/index.html')
+                || (currentPath === '/index.html' && linkPath === '/')
+                || (currentPath.endsWith('/') && linkPath === currentPath + 'index.html');
+            if (isActive) {
+                link.classList.add('active');
+            }
+        });
+    })();
+
+    /* ----- Language selector dropdown (3+ languages) ----- */
+    var langSelector = document.querySelector('.lang-selector-toggle');
+    if (langSelector) {
+        langSelector.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var parent = this.parentElement;
+            var isOpen = parent.classList.contains('open');
+            parent.classList.toggle('open');
+            this.setAttribute('aria-expanded', !isOpen);
+        });
+
+        document.addEventListener('click', function () {
+            var openSelector = document.querySelector('.lang-selector.open');
+            if (openSelector) {
+                openSelector.classList.remove('open');
+                openSelector.querySelector('.lang-selector-toggle').setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
 });

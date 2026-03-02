@@ -1,0 +1,8 @@
+{
+  "name": "clewbyte-website",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "clean": "rm -rf dist"
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{meta.lang}}" dir="{{meta.dir}}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{page.meta_description}}">
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="{{page.meta_description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{_canonical_url}}">
+    <meta property="og:locale" content="{{meta.locale}}">
+    <title>{{page.title}}</title>
+    {{_hreflang_tags}}
+    <link rel="canonical" href="{{_canonical_url}}">
+    <link rel="icon" type="image/svg+xml" href="{{_assets}}images/favicon.svg">
+    <link rel="stylesheet" href="{{_assets}}css/style.css">
+</head>

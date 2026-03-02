@@ -1,0 +1,66 @@
+{{> head}}
+<body>
+
+{{> header}}
+
+    <!-- ===== HERO ===== -->
+    <section class="hero hero-compact">
+        <div class="container">
+            <h1 class="fade-in">{{page.hero_title}}</h1>
+            <p class="fade-in delay-1">{{page.hero_subtitle}}</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-single-column">
+        <div class="container">
+            <div class="contact-cards fade-in">
+                <div class="contact-info-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>{{page.email_label}}</h4>
+                        <p><span class="email-obfuscated"></span></p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>{{page.address_label}}</h4>
+                        <p>{{page.address_value}}</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <rect x="2" y="3" width="20" height="18" rx="2"/>
+                            <path d="M8 7v10"/>
+                            <path d="M12 7v10"/>
+                            <path d="M16 7v10"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>{{page.details_label}}</h4>
+                        <p>{{page.details_value}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{> footer}}
+
+    <script src="{{_assets}}js/main.js"></script>
+</body>
+</html>

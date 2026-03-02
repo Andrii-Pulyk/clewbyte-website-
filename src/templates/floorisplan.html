@@ -1,0 +1,209 @@
+{{> head}}
+<body>
+
+{{> header}}
+
+    <!-- ===== APP HERO ===== -->
+    <section class="app-hero">
+        <div class="container">
+            <span class="product-badge badge-dev fade-in">{{page.badge}}</span>
+            <h1 class="fade-in delay-1">{{page.hero_title}}</h1>
+            <p class="tagline fade-in delay-2">{{page.hero_tagline}}</p>
+            <div class="btn-group fade-in delay-3">
+                <span class="btn btn-disabled">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    {{page.hero_cta}}
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AUDIENCE ===== -->
+    <section class="section section-center">
+        <div class="container">
+            <h2 class="section-title fade-in">{{page.audience_title}}</h2>
+            <p class="section-subtitle fade-in delay-1">{{page.audience_subtitle}}</p>
+
+            <div class="cards-grid">
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                            <path d="M2 2l7.586 7.586"/>
+                            <circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.audience_designers_title}}</h3>
+                    <p>{{page.audience_designers_desc}}</p>
+                </div>
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.audience_foremen_title}}</h3>
+                    <p>{{page.audience_foremen_desc}}</p>
+                </div>
+                <div class="card fade-in delay-3">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.audience_masters_title}}</h3>
+                    <p>{{page.audience_masters_desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section section-alt">
+        <div class="container section-center">
+            <h2 class="section-title fade-in">{{page.features_title}}</h2>
+            <p class="section-subtitle fade-in delay-1">{{page.features_subtitle}}</p>
+
+            <div class="cards-grid">
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                            <line x1="12" y1="3" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_rooms_title}}</h3>
+                    <p>{{page.feature_rooms_desc}}</p>
+                </div>
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                            <path d="M6 8H5a4 4 0 0 0 0 8h1"/>
+                            <line x1="6" y1="12" x2="18" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_openings_title}}</h3>
+                    <p>{{page.feature_openings_desc}}</p>
+                </div>
+                <div class="card fade-in delay-3">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <polyline points="5 9 2 12 5 15"/>
+                            <polyline points="9 5 12 2 15 5"/>
+                            <polyline points="15 19 12 22 9 19"/>
+                            <polyline points="19 9 22 12 19 15"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <line x1="12" y1="2" x2="12" y2="22"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_moving_title}}</h3>
+                    <p>{{page.feature_moving_desc}}</p>
+                </div>
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <rect x="2" y="3" width="20" height="18" rx="2"/>
+                            <line x1="2" y1="9" x2="22" y2="9"/>
+                            <line x1="8" y1="9" x2="8" y2="21"/>
+                            <line x1="16" y1="9" x2="16" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_walls_title}}</h3>
+                    <p>{{page.feature_walls_desc}}</p>
+                </div>
+                <div class="card fade-in delay-2">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v4"/>
+                            <path d="M12 19v4"/>
+                            <path d="M4.22 4.22l2.83 2.83"/>
+                            <path d="M16.95 16.95l2.83 2.83"/>
+                            <path d="M1 12h4"/>
+                            <path d="M19 12h4"/>
+                            <path d="M4.22 19.78l2.83-2.83"/>
+                            <path d="M16.95 7.05l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_points_title}}</h3>
+                    <p>{{page.feature_points_desc}}</p>
+                </div>
+                <div class="card fade-in delay-3">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_inventory_title}}</h3>
+                    <p>{{page.feature_inventory_desc}}</p>
+                </div>
+                <div class="card fade-in delay-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                            <line x1="8" y1="23" x2="16" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3>{{page.feature_voice_title}}</h3>
+                    <p>{{page.feature_voice_desc}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCREENSHOTS ===== -->
+    <section class="section screenshots section-center">
+        <div class="container">
+            <h2 class="section-title fade-in">{{page.screenshots_title}}</h2>
+            <p class="section-subtitle fade-in delay-1">{{page.screenshots_subtitle}}</p>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-placeholder fade-in delay-1">
+                    <span>{{page.screenshot_placeholder}} 1</span>
+                </div>
+                <div class="screenshot-placeholder fade-in delay-2">
+                    <span>{{page.screenshot_placeholder}} 2</span>
+                </div>
+                <div class="screenshot-placeholder fade-in delay-3">
+                    <span>{{page.screenshot_placeholder}} 3</span>
+                </div>
+                <div class="screenshot-placeholder fade-in delay-4">
+                    <span>{{page.screenshot_placeholder}} 4</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section-center section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">{{page.cta_title}}</h2>
+            <p class="section-subtitle fade-in delay-1">{{page.cta_subtitle}}</p>
+            <div class="btn-group fade-in delay-2">
+                <span class="btn btn-disabled">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    {{page.cta_soon}}
+                </span>
+                <a href="{{_nav_contacts_url}}" class="btn btn-secondary">{{page.cta_contact}}</a>
+            </div>
+        </div>
+    </section>
+
+{{> footer}}
+
+    <script src="{{_assets}}js/main.js"></script>
+</body>
+</html>
