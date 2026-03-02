@@ -487,27 +487,20 @@ ul {
 
 .screenshots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.screenshot-placeholder {
-    aspect-ratio: 9/16;
-    max-height: 420px;
-    background: var(--bg-card);
-    border: 1px dashed var(--border-color);
+.screenshot-item {
     border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    transition: all var(--transition);
+    overflow: hidden;
 }
 
-.screenshot-placeholder:hover {
-    border-color: var(--accent);
-    background: var(--bg-card-hover);
+.screenshot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
 }
 
 /* ============================================
