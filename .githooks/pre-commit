@@ -1,0 +1,4 @@
+#!/bin/sh
+# Auto-build site before commit
+npm run build
+git add dist/
