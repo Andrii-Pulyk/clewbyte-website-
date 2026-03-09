@@ -271,5 +271,38 @@ copyDirRecursive(path.join(SRC, 'css'), path.join(DIST, 'css'));
 copyDirRecursive(path.join(SRC, 'js'), path.join(DIST, 'js'));
 copyDirRecursive(path.join(SRC, 'images'), path.join(DIST, 'images'));
 
+// ─── 8. Generate sitemap.xml ────────────────────────────────────────────────
+
+const sitemapUrls = [];
+for (const page of config.pages) {
+  for (const lang of languages) {
+    const url = getPageUrl(page.slug, page.template, lang);
+    const priority = page.slug === 'index' ? '1.0'
+      : page.slug === 'privacy' ? '0.3'
+      : '0.8';
+    sitemapUrls.push(`  <url>\n    <loc>${url}</loc>\n    <priority>${priority}</priority>\n  </url>`);
+  }
+}
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.join('\n')}
+</urlset>
+`;
+
+fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap, 'utf8');
+console.log('  sitemap.xml generated');
+
+// ─── 9. Generate robots.txt ─────────────────────────────────────────────────
+
+const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${config.siteUrl}/sitemap.xml
+`;
+
+fs.writeFileSync(path.join(DIST, 'robots.txt'), robots, 'utf8');
+console.log('  robots.txt generated');
+
 console.log(`\nBuild complete: ${pagesGenerated} pages generated for ${languages.length} languages.`);
 console.log(`Static assets copied.`);
