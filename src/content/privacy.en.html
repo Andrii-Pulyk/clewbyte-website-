@@ -49,22 +49,38 @@
     <li>Floor plans and measurements</li>
     <li>Wall elevations</li>
     <li>Engineering point markers (electrical, water, sewage, radiators)</li>
+    <li>Estimates, material lists, and payment amounts</li>
+    <li>Project tasks, notes, and schedules</li>
+    <li>Project photos, if added by the user</li>
 </ul>
 
-<h3>2.5. Voice Input (RECORD_AUDIO)</h3>
-<p>The Application requests the RECORD_AUDIO permission for voice-controlled drawing. The audio stream is transmitted to Google Speech Recognition servers for speech recognition. Audio is not saved by the Application. The user can opt out of voice input and use manual input instead.</p>
+<h3>2.5. Client Data in a Project Card</h3>
+<p>A user may voluntarily add their client's name, phone number, email address, PESEL national identification number, and residential address to a project card. This data is stored in the Application's protected storage on the device and is used to manage the project, contact the client, and generate documents locally.</p>
+<p><strong>Floris AI does not receive these fields and cannot read, add, or modify them.</strong> The client's name, phone number, email address, PESEL, and residential address are not sent to OpenRouter or AI model providers. Client names and phone numbers stored in schedule entries are also excluded from AI context.</p>
+<p>The user is responsible for having a lawful basis to enter another person's data and for meeting any applicable duty to inform that person. Personal client data should not be entered into free-text tasks, notes, schedule period titles, or Floris AI commands, because such text may be sent to the AI service as described in Section 2.7.</p>
 
-<h3>2.6. AI Estimation (Floris AI)</h3>
-<p>When you use the Floris AI voice estimation feature, your transcribed voice text and project room data (room names, areas, perimeters) are sent to OpenRouter API (openrouter.ai) for AI processing. This data is used solely to parse your request and generate estimation items. OpenRouter processes data in accordance with their <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>. No audio is sent — only the transcribed text. AI requests are not linked to your personal identity. The app does not store AI conversation history on external servers.</p>
+<h3>2.6. Voice Input (RECORD_AUDIO)</h3>
+<p>The Application requests the RECORD_AUDIO permission for voice-controlled drawing and estimating. Recognition is performed by the system speech recognition service selected or provided by the device; depending on its settings, the audio stream may be transmitted to that service provider. The Application does not save audio recordings. The user can opt out of voice input and use manual input instead.</p>
 
-<h3>2.7. Google Play Billing (Purchases)</h3>
+<h3>2.7. Floris AI</h3>
+<p>When a user interacts with Floris AI, the Application sends the typed or transcribed command and the working context of the current project needed to answer or carry out the command to OpenRouter API (openrouter.ai). This context may include the project name and site address, area, room parameters, estimate items, project payment amounts, tasks, notes, and the dates, titles, statuses, and notes of schedule periods.</p>
+<p>Direct client data from the project card — name, phone number, email address, PESEL, and residential address — is not included in AI context. Client names and phone numbers are also removed from schedule data before it is sent. Floris AI has no access to contracts or their contents. No audio is sent to OpenRouter; only recognized text is transmitted.</p>
+<p>OpenRouter routes the request to a selected AI model provider. Processing by OpenRouter and model providers is governed by their terms and policies; see the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a> for details. The Application does not maintain its own external history of AI conversations.</p>
+
+<h3>2.8. Google Play Billing (Purchases)</h3>
 <p>The Application offers subscriptions and one-time purchases through Google Play. Google processes payment data — the Application does not receive bank card details. The Application receives from Google: subscription status, purchase history, and purchase tokens. Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Policy</a>.</p>
 
-<h3>2.8. System Data</h3>
+<h3>2.9. System Data</h3>
 <p>The Application reads the installation time to calculate the trial period (30 days) and the country/region from the device's system locale to determine access conditions.</p>
 
-<h3>2.9. Data Export</h3>
-<p>Exported PDF and DXF files contain the user's personal data (name, email, company, address, phone number) as specified in the profile. When sharing files through third-party applications (e.g., email, messengers), the user is solely responsible for their distribution.</p>
+<h3>2.10. Bluetooth Distance Meter</h3>
+<p>The Application requests Bluetooth permissions to discover and connect to a compatible Leica DISTO laser distance meter. On older Android versions, Bluetooth Low Energy scanning may additionally require location permission. The Application does not obtain, store, or transmit geographic coordinates; this permission is used only to discover and connect to the measurement device.</p>
+
+<h3>2.11. Data Export and Documents</h3>
+<p>Exported files and generated documents may contain user profile data, project information, and client data selected for the relevant document. Files are generated locally. When a user saves them outside the Application's protected storage or shares them through a third-party application, such as email or a messenger, the user selects the recipient and is responsible for further distribution.</p>
+
+<h3>2.12. Android Backup</h3>
+<p>If Android system backup is enabled on the device, Application data, including projects, estimates, photos, and schedules, may be included in the user's Google Account backup and restored on a compatible device. Backup is performed by Android and is governed by the user's account settings and Google's policy. Users can manage backup in the device's system settings.</p>
 
 <h2>3. Purposes of Data Processing</h2>
 <p>We process your data for the following purposes:</p>
@@ -88,8 +104,9 @@
 <h2>5. Data Sharing with Third Parties</h2>
 <p>We may share data with the following categories of recipients:</p>
 <ul>
-    <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Firebase Crashlytics, Google Speech Recognition, and Google Play Billing (servers may be located outside the EEA; transfers are carried out based on Standard Contractual Clauses)</li>
-    <li><strong>OpenRouter, Inc.</strong> — for AI processing of voice estimation requests (Floris AI feature). Only transcribed text and room data are transmitted. See <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a></li>
+    <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Firebase Crashlytics, Google Play Billing, and Android system backup, and for speech recognition when a Google service is selected on the device (servers may be located outside the EEA; transfers are made using applicable international data-transfer mechanisms)</li>
+    <li><strong>The provider of the device's system speech recognition service</strong> — to process audio only when voice input is used and a non-Google provider is selected on the device</li>
+    <li><strong>OpenRouter, Inc. and selected AI model providers</strong> — to process Floris AI requests. The user's command and the working project context described in Section 2.7 are transmitted. Direct client data from project cards and client contact details from schedules are not transmitted. See the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a></li>
     <li><strong>Government authorities</strong> — in cases provided for by law</li>
 </ul>
 <p>We do not sell your personal data to third parties.</p>
@@ -97,7 +114,8 @@
 <h2>6. Data Retention</h2>
 <p>We retain your personal data for as long as necessary for the purposes described in this Policy:</p>
 <ul>
-    <li>User profile data — stored locally on the device until the Application is uninstalled by the user</li>
+    <li>User profile, project, and client-card data — stored locally until the user deletes the relevant data, clears Application data, or uninstalls the Application; copies may remain in Android system backup as described in Section 2.12</li>
+    <li>AI request content — processed by OpenRouter and the selected model provider under their applicable retention settings and policies</li>
     <li>Analytics data — up to 26 months (default Firebase Analytics settings)</li>
     <li>Crash data (Crashlytics) — up to 90 days</li>
     <li>Purchase data — in accordance with Google Play policy</li>
@@ -108,7 +126,7 @@
 <ul>
     <li><strong>Right of access</strong> — to obtain information about your data that we process</li>
     <li><strong>Right to rectification</strong> — to correct inaccurate or incomplete data</li>
-    <li><strong>Right to erasure</strong> — delete local data by uninstalling the Application or clearing its data through device settings</li>
+    <li><strong>Right to erasure</strong> — delete a client or individual project in the Application, or delete all local data by clearing Application data or uninstalling it; system backups can be managed through Android and Google Account settings</li>
     <li><strong>Right to restriction of processing</strong> — to restrict data processing</li>
     <li><strong>Right to data portability</strong> — to receive your data in a machine-readable format</li>
     <li><strong>Right to object</strong> — to object to data processing based on legitimate interest</li>
