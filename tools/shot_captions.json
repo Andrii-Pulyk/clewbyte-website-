@@ -1,0 +1,111 @@
+{
+  "_comment": "Captions burned into the app screenshots on the FloorisPlan page. Each locale has six entries, in the order they appear in the screenshots grid. title[1] is drawn in the accent colour.",
+
+  "en": [
+    {
+      "title": ["Everything for one job", "in a single card"],
+      "subtitle": ["Client, dates, estimate and contract", "on one screen"]
+    },
+    {
+      "title": ["Accurate floor plan", "in minutes"],
+      "subtitle": ["Room measurements with automatic", "area calculations"]
+    },
+    {
+      "title": ["Wall elevations", "generated automatically"],
+      "subtitle": ["Every wall in detail — outlets,", "switches and openings"]
+    },
+    {
+      "title": ["Estimate straight", "from the measurements"],
+      "subtitle": ["Quantities and prices calculated", "from your own plan"]
+    },
+    {
+      "title": ["Job schedule", "at a glance"],
+      "subtitle": ["See booked dates before you", "promise a start"]
+    },
+    {
+      "title": ["Contract", "ready to sign"],
+      "subtitle": ["DOCX with client details,", "scope of work and total"]
+    }
+  ],
+
+  "ru": [
+    {
+      "title": ["Всё по объекту", "в одной карточке"],
+      "subtitle": ["Клиент, сроки, смета и договор —", "на одном экране"]
+    },
+    {
+      "title": ["Точный план", "за минуты"],
+      "subtitle": ["Замер комнат с автоматическим", "расчётом площадей"]
+    },
+    {
+      "title": ["Развёртки стен", "строятся сами"],
+      "subtitle": ["Каждая стена в деталях — розетки,", "выключатели, проёмы"]
+    },
+    {
+      "title": ["Смета прямо", "из замеров"],
+      "subtitle": ["Объёмы и цены считаются", "по вашему плану"]
+    },
+    {
+      "title": ["Расписание", "объектов"],
+      "subtitle": ["Занятые сроки видно до разговора", "с заказчиком"]
+    },
+    {
+      "title": ["Договор", "готов к подписи"],
+      "subtitle": ["DOCX с данными клиента,", "объёмом работ и суммой"]
+    }
+  ],
+
+  "pl": [
+    {
+      "title": ["Wszystko o zleceniu", "w jednej karcie"],
+      "subtitle": ["Klient, terminy, kosztorys i umowa", "na jednym ekranie"]
+    },
+    {
+      "title": ["Dokładny rzut", "w kilka minut"],
+      "subtitle": ["Pomiar pomieszczeń z automatycznym", "liczeniem powierzchni"]
+    },
+    {
+      "title": ["Rozwinięcia ścian", "powstają same"],
+      "subtitle": ["Każda ściana w szczegółach — gniazdka,", "włączniki i otwory"]
+    },
+    {
+      "title": ["Kosztorys prosto", "z pomiarów"],
+      "subtitle": ["Ilości i ceny liczone", "z Twojego rzutu"]
+    },
+    {
+      "title": ["Harmonogram zleceń", "na pierwszy rzut oka"],
+      "subtitle": ["Zajęte terminy widzisz, zanim", "obiecasz start"]
+    },
+    {
+      "title": ["Umowa", "gotowa do podpisu"],
+      "subtitle": ["DOCX z danymi klienta,", "zakresem prac i kwotą"]
+    }
+  ],
+
+  "de": [
+    {
+      "title": ["Alles zum Auftrag", "in einer Karte"],
+      "subtitle": ["Kunde, Termine, Angebot und Vertrag", "auf einem Bildschirm"]
+    },
+    {
+      "title": ["Genauer Grundriss", "in Minuten"],
+      "subtitle": ["Raumaufmaß mit automatischer", "Flächenberechnung"]
+    },
+    {
+      "title": ["Wandabwicklungen", "ganz automatisch"],
+      "subtitle": ["Jede Wand im Detail — Steckdosen,", "Schalter und Öffnungen"]
+    },
+    {
+      "title": ["Angebot direkt", "aus dem Aufmaß"],
+      "subtitle": ["Mengen und Preise berechnet", "aus Ihrem Grundriss"]
+    },
+    {
+      "title": ["Auftragsplan", "auf einen Blick"],
+      "subtitle": ["Belegte Termine sehen, bevor Sie", "einen Start zusagen"]
+    },
+    {
+      "title": ["Vertrag", "unterschriftsreif"],
+      "subtitle": ["DOCX mit Kundendaten,", "Leistungsumfang und Summe"]
+    }
+  ]
+}

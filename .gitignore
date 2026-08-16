@@ -3,3 +3,6 @@
 dist/
 node_modules/
 .playwright-mcp/
+
+# Python bytecode from tools/
+__pycache__/
