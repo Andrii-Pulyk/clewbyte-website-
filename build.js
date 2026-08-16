@@ -39,6 +39,33 @@ console.log(`Partials loaded: ${Object.keys(partials).join(', ')}`);
 
 // ─── 4. Helper functions ───────────────────────────────────────────────────────
 
+function languagesForPage(page) {
+  if (!page.contentRequired) return languages;
+  return languages.filter(lang =>
+    fs.existsSync(path.join(CONTENT_DIR, `${page.slug}.${lang}.html`))
+  );
+}
+
+// Language whose app screenshots to show. Falls back to the default language
+// when a locale has no screenshot set of its own yet.
+function getScreenshotLang(lang) {
+  const shot = path.join(SRC, 'images', 'screenshots', `screenshot_01_${lang}.png`);
+  return fs.existsSync(shot) ? lang : config.defaultLang;
+}
+
+function findPage(slug) {
+  return config.pages.find(p => p.slug === slug);
+}
+
+// URL of a page in the requested language, falling back to the default
+// language when that page does not exist for it (e.g. privacy in PL/DE).
+function getAvailablePageUrl(slug, lang) {
+  const page = findPage(slug);
+  const langs = languagesForPage(page);
+  const useLang = langs.includes(lang) ? lang : config.defaultLang;
+  return getOutputPath(slug, page.template, useLang);
+}
+
 function getNestedValue(obj, keyPath) {
   return keyPath.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
 }
@@ -190,7 +217,9 @@ for (const page of config.pages) {
   const templatePath = path.join(TEMPLATES_DIR, page.template);
   const template = fs.readFileSync(templatePath, 'utf8');
 
-  for (const lang of languages) {
+  const pageLangs = languagesForPage(page);
+
+  for (const lang of pageLangs) {
     const t = translations[lang];
     const navUrls = generateNavUrls(lang);
 
@@ -211,9 +240,9 @@ for (const page of config.pages) {
       // Find the "other" language for the switch link
       // For 2 languages, toggle to the other
       // For 3+, link to the default lang (or the first different one)
-      const otherLang = languages.length === 2
-        ? languages.find(l => l !== lang)
-        : (lang === config.defaultLang ? languages.find(l => l !== lang) : config.defaultLang);
+      const otherLang = pageLangs.length === 2
+        ? pageLangs.find(l => l !== lang)
+        : (lang === config.defaultLang ? pageLangs.find(l => l !== lang) : config.defaultLang);
       if (otherLang) {
         privacySwitchUrl = getOutputPath('privacy', 'privacy.html', otherLang);
       }
@@ -231,13 +260,14 @@ for (const page of config.pages) {
       // Computed values (prefixed with _ to distinguish)
       _assets: assetsPrefix,
       _canonical_url: canonicalUrl,
-      _hreflang_tags: generateHreflangTags(page, languages),
-      _lang_switcher: generateLangSwitcher(lang, page, languages),
-      _lang_switcher_mobile: generateLangSwitcherMobile(lang, page, languages),
+      _screenshot_lang: getScreenshotLang(lang),
+      _hreflang_tags: generateHreflangTags(page, pageLangs),
+      _lang_switcher: generateLangSwitcher(lang, page, pageLangs),
+      _lang_switcher_mobile: generateLangSwitcherMobile(lang, page, pageLangs),
       _nav_home_url: navUrls.index,
       _nav_floorisplan_url: navUrls.floorisplan,
       _nav_contacts_url: navUrls.contact,
-      _privacy_url: getOutputPath('privacy', 'privacy.html', lang),
+      _privacy_url: getAvailablePageUrl('privacy', lang),
       _privacy_switch_url: privacySwitchUrl,
       _page_content: pageContent,
     };
@@ -275,7 +305,7 @@ copyDirRecursive(path.join(SRC, 'images'), path.join(DIST, 'images'));
 
 const sitemapUrls = [];
 for (const page of config.pages) {
-  for (const lang of languages) {
+  for (const lang of languagesForPage(page)) {
     const url = getPageUrl(page.slug, page.template, lang);
     const priority = page.slug === 'index' ? '1.0'
       : page.slug === 'privacy' ? '0.3'

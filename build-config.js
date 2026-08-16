@@ -6,7 +6,9 @@ module.exports = {
     { template: 'index.html', slug: 'index' },
     { template: 'floorisplan.html', slug: 'floorisplan' },
     { template: 'contact.html', slug: 'contact' },
-    { template: 'privacy.html', slug: 'privacy' },
+    // contentRequired: page body comes from src/content/{slug}.{lang}.html,
+    // so the page is generated only for languages that have such a file.
+    { template: 'privacy.html', slug: 'privacy', contentRequired: true },
   ],
 
   // Override default URL pattern for specific page+lang combos
