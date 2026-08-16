@@ -370,6 +370,63 @@ ul {
     font-size: 0.92rem;
 }
 
+/* ============================================
+   ЭТАПЫ РАБОТЫ (workflow)
+   ============================================ */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: 24px;
+    text-align: left;
+}
+
+.workflow-step {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 32px 28px 28px;
+    transition: all var(--transition);
+}
+
+.workflow-step:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.18;
+}
+
+.step-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.workflow-step h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.workflow-step p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
 .product-card-link {
     text-decoration: none;
     color: inherit;
@@ -484,6 +541,62 @@ ul {
     color: var(--text-secondary);
     max-width: 650px;
     margin: 0 auto 36px;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.hero-badges li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    padding: 6px 16px;
+}
+
+.hero-badges li.badge-accent {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-glow);
+}
+
+/* Стоимость */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 24px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+
+.pricing-card-free {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent-glow);
+}
+
+.pricing-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pricing-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
 /* Скриншоты */
