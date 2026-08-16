@@ -2,7 +2,7 @@
 <html lang="pl" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.googleadservices.com https://www.google-analytics.com; style-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com; frame-src https://td.doubleclick.net https://www.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -22,6 +22,7 @@
     <link rel="canonical" href="https://clewbyte.com/pl/contact.html">
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
     <link rel="stylesheet" href="../css/style.css">
+    <script id="site-analytics" src="../js/analytics.js" data-ga4="G-E7NEFNDL1N" defer></script>
 </head>
 
 <body>
@@ -129,6 +130,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie consent. Hidden until js/analytics.js decides it is needed:
+         no Google tag configured or a stored choice means it never appears. -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+         aria-label="Zgoda na pliki cookie" hidden>
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                Używamy plików cookie Google Analytics i Google Ads, aby wiedzieć, jak działa strona i które reklamy przyciągają odwiedzających. Do momentu wyrażenia zgody nic nie jest zapisywane na Twoim urządzeniu.
+                <a href="/privacy-en.html">Polityka prywatności</a>
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="btn btn-secondary" id="cookieDecline">Odrzuć</button>
+                <button type="button" class="btn btn-primary" id="cookieAccept">Akceptuję</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="../js/main.js"></script>

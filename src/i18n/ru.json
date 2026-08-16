@@ -20,6 +20,14 @@
     "brand_description": "Dabudinwst Sp. z o.o. — разработка профессиональных мобильных приложений."
   },
 
+  "cookies": {
+    "aria": "Согласие на cookie",
+    "text": "Мы используем cookie Google Analytics и Google Ads, чтобы видеть, как работает сайт и какая реклама приводит посетителей. До вашего согласия на устройстве ничего не сохраняется.",
+    "accept": "Принять",
+    "decline": "Отклонить",
+    "more": "Политика конфиденциальности"
+  },
+
   "index": {
     "title": "ClewByte — Разработка приложений",
     "meta_description": "ClewByte — IT-компания, разрабатывающая профессиональные мобильные приложения.",
@@ -57,6 +65,10 @@
     "hero_badge_2": "Без регистрации",
     "hero_badge_3": "Меньше 10 МБ",
     "hero_badge_4": "Бесплатно, кроме Floris AI",
+    "hero_video_label": "FloorisPlan: установка радиатора на развёртке стены",
+    "hero_qr_title": "Сканируйте, чтобы установить",
+    "hero_qr_note": "Наведите камеру телефона на код — откроется страница FloorisPlan в Google Play.",
+    "hero_qr_alt": "QR-код со ссылкой на FloorisPlan в Google Play",
 
     "workflow_title": "Как идёт объект в FloorisPlan",
     "workflow_subtitle": "От первого выезда до подписанного договора — не выходя из приложения",
@@ -151,6 +163,6 @@
     "meta_description": "Политика конфиденциальности приложения FloorisPlan — Dabudinwst Sp. z o.o.",
     "h1": "Политика конфиденциальности",
     "lang_switch_text": "English version →",
-    "last_updated": "Последнее обновление: 1 августа 2026 г."
+    "last_updated": "Последнее обновление: 16 августа 2026 г."
   }
 }

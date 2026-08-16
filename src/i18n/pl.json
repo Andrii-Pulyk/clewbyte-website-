@@ -20,6 +20,14 @@
     "brand_description": "Dabudinwst Sp. z o.o. — profesjonalne tworzenie aplikacji mobilnych."
   },
 
+  "cookies": {
+    "aria": "Zgoda na pliki cookie",
+    "text": "Używamy plików cookie Google Analytics i Google Ads, aby wiedzieć, jak działa strona i które reklamy przyciągają odwiedzających. Do momentu wyrażenia zgody nic nie jest zapisywane na Twoim urządzeniu.",
+    "accept": "Akceptuję",
+    "decline": "Odrzuć",
+    "more": "Polityka prywatności"
+  },
+
   "index": {
     "title": "ClewByte — tworzenie aplikacji",
     "meta_description": "ClewByte — firma IT tworząca profesjonalne aplikacje mobilne.",
@@ -57,6 +65,10 @@
     "hero_badge_2": "Bez rejestracji",
     "hero_badge_3": "Poniżej 10 MB",
     "hero_badge_4": "Za darmo, poza Floris AI",
+    "hero_video_label": "FloorisPlan: umieszczanie grzejnika na rozwinięciu ściany",
+    "hero_qr_title": "Zeskanuj, aby zainstalować",
+    "hero_qr_note": "Skieruj aparat telefonu na kod — otworzy się FloorisPlan w Google Play.",
+    "hero_qr_alt": "Kod QR z linkiem do FloorisPlan w Google Play",
 
     "workflow_title": "Jak przebiega zlecenie w FloorisPlan",
     "workflow_subtitle": "Od pierwszej wizyty na obiekcie do podpisanej umowy — bez wychodzenia z aplikacji",

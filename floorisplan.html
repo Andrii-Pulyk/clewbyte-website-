@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.googleadservices.com https://www.google-analytics.com; style-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com; frame-src https://td.doubleclick.net https://www.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -22,6 +22,7 @@
     <link rel="canonical" href="https://clewbyte.com/floorisplan.html">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
+    <script id="site-analytics" src="js/analytics.js" data-ga4="G-E7NEFNDL1N" defer></script>
 </head>
 
 <body>
@@ -52,7 +53,7 @@
             <h1 class="fade-in delay-1">FloorisPlan</h1>
             <p class="tagline fade-in delay-2">Everything for one job in a single project card: measurements, plan, estimate, contract, and schedule.</p>
             <div class="btn-group fade-in delay-3">
-                <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" class="btn btn-primary" target="_blank" rel="noopener">
+                <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" class="btn btn-primary" target="_blank" rel="noopener" data-play-source="hero">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"/>
                     </svg>
@@ -65,6 +66,23 @@
                 <li>Under 10 MB</li>
                 <li class="badge-accent">Free, except Floris AI</li>
             </ul>
+
+            <div class="hero-media fade-in delay-4">
+                <div class="hero-video">
+                    <video autoplay muted loop playsinline
+                           poster="video/floorisplan-hero-poster.jpg"
+                           aria-label="FloorisPlan: placing a radiator on a wall elevation">
+                        <source src="video/floorisplan-hero.webm" type="video/webm">
+                        <source src="video/floorisplan-hero.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Desktop only: a phone is where the app actually gets installed. -->
+                <aside class="hero-qr">
+                    <img src="images/play-qr.svg" alt="QR code linking to FloorisPlan on Google Play" width="148" height="148">
+                    <p class="hero-qr-title">Scan to install</p>
+                    <p class="hero-qr-note">Point your phone camera at the code — it opens FloorisPlan on Google Play.</p>
+                </aside>
+            </div>
         </div>
     </section>
 
@@ -392,7 +410,7 @@
             <h2 class="section-title fade-in">Available on Google Play</h2>
             <p class="section-subtitle fade-in delay-1">Download FloorisPlan and run your next job from the first measurement to a signed contract.</p>
             <div class="btn-group fade-in delay-2">
-                <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" class="btn btn-primary" target="_blank" rel="noopener">
+                <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" class="btn btn-primary" target="_blank" rel="noopener" data-play-source="cta">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"/>
                     </svg>
@@ -431,6 +449,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie consent. Hidden until js/analytics.js decides it is needed:
+         no Google tag configured or a stored choice means it never appears. -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+         aria-label="Cookie consent" hidden>
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                We use Google Analytics and Google Ads cookies to see how the site performs and which ads bring visitors. Nothing is stored on your device until you accept.
+                <a href="/privacy-en.html">Privacy Policy</a>
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="btn btn-secondary" id="cookieDecline">Decline</button>
+                <button type="button" class="btn btn-primary" id="cookieAccept">Accept</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/main.js"></script>

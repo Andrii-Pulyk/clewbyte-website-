@@ -58,6 +58,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    /* ----- Видео на первом экране ----- */
+    // Автовоспроизведение отключаем тем, кто просил меньше движения:
+    // атрибут autoplay такую настройку сам по себе не учитывает.
+    (function () {
+        if (!window.matchMedia) return;
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        document.querySelectorAll('.hero-video video').forEach(function (video) {
+            video.removeAttribute('autoplay');
+            video.removeAttribute('loop');
+            video.setAttribute('controls', 'controls');
+            video.pause();
+        });
+    })();
+
     /* ----- Обфускация email от спам-ботов ----- */
     (function () {
         var user = 'info.floorisplan';

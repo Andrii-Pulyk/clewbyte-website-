@@ -2,7 +2,7 @@
 <html lang="{{meta.lang}}" dir="{{meta.dir}}">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="{{_csp}}">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -18,4 +18,5 @@
     <link rel="canonical" href="{{_canonical_url}}">
     <link rel="icon" type="image/svg+xml" href="{{_assets}}images/favicon.svg">
     <link rel="stylesheet" href="{{_assets}}css/style.css">
+{{_analytics_tag}}
 </head>

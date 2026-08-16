@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.googleadservices.com https://www.google-analytics.com; style-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com; frame-src https://td.doubleclick.net https://www.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -20,6 +20,7 @@
     <link rel="canonical" href="https://clewbyte.com/privacy-en.html">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
+    <script id="site-analytics" src="js/analytics.js" data-ga4="G-E7NEFNDL1N" defer></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
     <main class="privacy-content container">
         <h1 class="fade-in">Privacy Policy</h1>
         <a href="/privacy.html" class="lang-switch fade-in">Русская версия →</a>
-        <p class="last-updated fade-in">Last updated: August 1, 2026</p>
+        <p class="last-updated fade-in">Last updated: August 16, 2026</p>
 
         <div>
             <p>This Privacy Policy describes how Dabudinwst Sp. z o.o. (hereinafter referred to as the "Company", "we") collects, uses, and protects the personal data of users of the FloorisPlan mobile application (hereinafter referred to as the "Application").</p>
@@ -199,6 +200,16 @@
 <h2>10. Cookies and Similar Technologies</h2>
 <p>The Application may use similar technologies (Firebase SDK, Firebase Crashlytics SDK, device identifiers) to ensure proper functioning of analytics and crash reporting. You can manage these settings through your device parameters.</p>
 
+<h3>10.1. Cookies on the clewbyte.com Website</h3>
+<p>The website uses Google Analytics 4 and the Google Ads tag to measure site traffic and the effectiveness of our advertising campaigns. These services are provided by Google Ireland Limited.</p>
+<ul>
+    <li><strong>Analytics cookies</strong> — number of visits, pages viewed, time on the site, approximate region, device type and browser</li>
+    <li><strong>Advertising cookies</strong> — which ad campaign brought you to the site, and whether the visit ended with a click through to Google Play</li>
+</ul>
+<p>These cookies are set <strong>only after you accept</strong> them in the banner shown on your first visit. Until then, Google Consent Mode keeps all storage denied: nothing is written to or read from your device, and the tag transmits only anonymous, non-identifying pings. If you decline, the site continues to work in full.</p>
+<p>The legal basis is your consent (Art. 6(1)(a) GDPR). You may withdraw it at any time by clearing this website's data in your browser settings — the banner will then appear again on your next visit. Website analytics data is retained for up to 14 months.</p>
+<p>No cookies are used for any other purpose: the website has no accounts, no advertising of third parties, and no tracking beyond the two services named above.</p>
+
 <h2>11. Changes to This Policy</h2>
 <p>We reserve the right to update this Privacy Policy. We will notify you of changes through the Application or by email. We recommend periodically reviewing this page.</p>
 
@@ -243,6 +254,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie consent. Hidden until js/analytics.js decides it is needed:
+         no Google tag configured or a stored choice means it never appears. -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+         aria-label="Cookie consent" hidden>
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                We use Google Analytics and Google Ads cookies to see how the site performs and which ads bring visitors. Nothing is stored on your device until you accept.
+                <a href="/privacy-en.html">Privacy Policy</a>
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="btn btn-secondary" id="cookieDecline">Decline</button>
+                <button type="button" class="btn btn-primary" id="cookieAccept">Accept</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/main.js"></script>

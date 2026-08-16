@@ -10,7 +10,7 @@
             <h1 class="fade-in delay-1">{{page.hero_title}}</h1>
             <p class="tagline fade-in delay-2">{{page.hero_tagline}}</p>
             <div class="btn-group fade-in delay-3">
-                <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" class="btn btn-primary" target="_blank" rel="noopener">
+                <a href="{{_play_url}}" class="btn btn-primary" target="_blank" rel="noopener" data-play-source="hero">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"/>
                     </svg>
@@ -23,6 +23,23 @@
                 <li>{{page.hero_badge_3}}</li>
                 <li class="badge-accent">{{page.hero_badge_4}}</li>
             </ul>
+
+            <div class="hero-media fade-in delay-4">
+                <div class="hero-video">
+                    <video autoplay muted loop playsinline
+                           poster="{{_assets}}video/floorisplan-hero-poster.jpg"
+                           aria-label="{{page.hero_video_label}}">
+                        <source src="{{_assets}}video/floorisplan-hero.webm" type="video/webm">
+                        <source src="{{_assets}}video/floorisplan-hero.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Desktop only: a phone is where the app actually gets installed. -->
+                <aside class="hero-qr">
+                    <img src="{{_assets}}images/play-qr.svg" alt="{{page.hero_qr_alt}}" width="148" height="148">
+                    <p class="hero-qr-title">{{page.hero_qr_title}}</p>
+                    <p class="hero-qr-note">{{page.hero_qr_note}}</p>
+                </aside>
+            </div>
         </div>
     </section>
 
@@ -350,7 +367,7 @@
             <h2 class="section-title fade-in">{{page.cta_title}}</h2>
             <p class="section-subtitle fade-in delay-1">{{page.cta_subtitle}}</p>
             <div class="btn-group fade-in delay-2">
-                <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" class="btn btn-primary" target="_blank" rel="noopener">
+                <a href="{{_play_url}}" class="btn btn-primary" target="_blank" rel="noopener" data-play-source="cta">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"/>
                     </svg>

@@ -26,3 +26,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie consent. Hidden until js/analytics.js decides it is needed:
+         no Google tag configured or a stored choice means it never appears. -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+         aria-label="{{cookies.aria}}" hidden>
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                {{cookies.text}}
+                <a href="{{_privacy_url}}">{{cookies.more}}</a>
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="btn btn-secondary" id="cookieDecline">{{cookies.decline}}</button>
+                <button type="button" class="btn btn-primary" id="cookieAccept">{{cookies.accept}}</button>
+            </div>
+        </div>
+    </div>

@@ -57,6 +57,67 @@ function findPage(slug) {
   return config.pages.find(p => p.slug === slug);
 }
 
+// ─── Google tags ───────────────────────────────────────────────────────────────
+
+const analytics = config.analytics || {};
+const analyticsEnabled = Boolean(analytics.ga4Id || analytics.adsId);
+
+// Content-Security-Policy. Google hosts are allowed only while a tag is
+// configured, so a tag-free build keeps the strict same-origin policy.
+function generateCsp() {
+  const csp = {
+    'default-src': ["'self'"],
+    'script-src': ["'self'"],
+    'style-src': ["'self'"],
+    'img-src': ["'self'", 'data:'],
+    'font-src': ["'self'"],
+    'frame-ancestors': ["'none'"],
+    'form-action': ["'self'"],
+    'base-uri': ["'self'"],
+  };
+
+  if (analyticsEnabled) {
+    csp['script-src'].push(
+      'https://www.googletagmanager.com',
+      'https://www.googleadservices.com',
+      'https://www.google-analytics.com'
+    );
+    csp['img-src'].push(
+      'https://www.googletagmanager.com',
+      'https://*.google-analytics.com',
+      'https://www.google.com',
+      'https://googleads.g.doubleclick.net'
+    );
+    csp['connect-src'] = [
+      "'self'",
+      'https://*.google-analytics.com',
+      'https://*.analytics.google.com',
+      'https://*.googletagmanager.com',
+      'https://*.g.doubleclick.net',
+      'https://www.google.com',
+    ];
+    csp['frame-src'] = ['https://td.doubleclick.net', 'https://www.googletagmanager.com'];
+  }
+
+  return Object.entries(csp)
+    .map(([directive, values]) => `${directive} ${values.join(' ')}`)
+    .join('; ') + ';';
+}
+
+// The tag loader carries its ids in data attributes: no inline script, so the
+// CSP needs neither 'unsafe-inline' nor per-page hashes.
+function generateAnalyticsTag(assetsPrefix) {
+  if (!analyticsEnabled) return '';
+  const attrs = [
+    'id="site-analytics"',
+    `src="${assetsPrefix}js/analytics.js"`,
+    analytics.ga4Id ? `data-ga4="${analytics.ga4Id}"` : '',
+    analytics.adsId ? `data-ads="${analytics.adsId}"` : '',
+    analytics.adsConversionLabel ? `data-ads-label="${analytics.adsConversionLabel}"` : '',
+  ].filter(Boolean);
+  return `    <script ${attrs.join(' ')} defer></script>`;
+}
+
 // URL of a page in the requested language, falling back to the default
 // language when that page does not exist for it (e.g. privacy in PL/DE).
 function getAvailablePageUrl(slug, lang) {
@@ -256,9 +317,13 @@ for (const page of config.pages) {
       meta: t.meta,
       nav: t.nav,
       footer: t.footer,
+      cookies: t.cookies,
       page: t[page.slug],
       // Computed values (prefixed with _ to distinguish)
       _assets: assetsPrefix,
+      _csp: generateCsp(),
+      _analytics_tag: generateAnalyticsTag(assetsPrefix),
+      _play_url: config.playUrl,
       _canonical_url: canonicalUrl,
       _screenshot_lang: getScreenshotLang(lang),
       _hreflang_tags: generateHreflangTags(page, pageLangs),
@@ -300,6 +365,7 @@ for (const page of config.pages) {
 copyDirRecursive(path.join(SRC, 'css'), path.join(DIST, 'css'));
 copyDirRecursive(path.join(SRC, 'js'), path.join(DIST, 'js'));
 copyDirRecursive(path.join(SRC, 'images'), path.join(DIST, 'images'));
+copyDirRecursive(path.join(SRC, 'video'), path.join(DIST, 'video'));
 
 // ─── 8. Generate sitemap.xml ────────────────────────────────────────────────
 

@@ -20,6 +20,14 @@
     "brand_description": "Dabudinwst Sp. z o.o. — professional mobile application development."
   },
 
+  "cookies": {
+    "aria": "Cookie consent",
+    "text": "We use Google Analytics and Google Ads cookies to see how the site performs and which ads bring visitors. Nothing is stored on your device until you accept.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "more": "Privacy Policy"
+  },
+
   "index": {
     "title": "ClewByte — App Development",
     "meta_description": "ClewByte — IT company developing professional mobile applications.",
@@ -57,6 +65,10 @@
     "hero_badge_2": "No sign-up",
     "hero_badge_3": "Under 10 MB",
     "hero_badge_4": "Free, except Floris AI",
+    "hero_video_label": "FloorisPlan: placing a radiator on a wall elevation",
+    "hero_qr_title": "Scan to install",
+    "hero_qr_note": "Point your phone camera at the code — it opens FloorisPlan on Google Play.",
+    "hero_qr_alt": "QR code linking to FloorisPlan on Google Play",
 
     "workflow_title": "How a job runs in FloorisPlan",
     "workflow_subtitle": "From the first site visit to a signed contract — without leaving the app",
@@ -151,6 +163,6 @@
     "meta_description": "Privacy Policy for the FloorisPlan application — Dabudinwst Sp. z o.o.",
     "h1": "Privacy Policy",
     "lang_switch_text": "Русская версия →",
-    "last_updated": "Last updated: August 1, 2026"
+    "last_updated": "Last updated: August 16, 2026"
   }
 }

@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.googleadservices.com https://www.google-analytics.com; style-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://www.google.com https://googleads.g.doubleclick.net; font-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com; frame-src https://td.doubleclick.net https://www.googletagmanager.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -20,6 +20,7 @@
     <link rel="canonical" href="https://clewbyte.com/privacy.html">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
+    <script id="site-analytics" src="js/analytics.js" data-ga4="G-E7NEFNDL1N" defer></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
     <main class="privacy-content container">
         <h1 class="fade-in">Политика конфиденциальности</h1>
         <a href="/privacy-en.html" class="lang-switch fade-in">English version →</a>
-        <p class="last-updated fade-in">Последнее обновление: 1 августа 2026 г.</p>
+        <p class="last-updated fade-in">Последнее обновление: 16 августа 2026 г.</p>
 
         <div>
             <p>Настоящая Политика конфиденциальности описывает, как Dabudinwst Sp. z o.o. (далее — «Компания», «мы») собирает, использует и защищает персональные данные пользователей мобильного приложения FloorisPlan (далее — «Приложение»).</p>
@@ -199,6 +200,16 @@
 <h2>10. Файлы cookie и аналогичные технологии</h2>
 <p>Приложение может использовать аналогичные технологии (SDK Firebase, Firebase Crashlytics SDK, идентификаторы устройств) для обеспечения корректной работы аналитики и отслеживания сбоев. Вы можете управлять этими настройками через параметры вашего устройства.</p>
 
+<h3>10.1. Файлы cookie на сайте clewbyte.com</h3>
+<p>Сайт использует Google Analytics 4 и тег Google Ads, чтобы измерять посещаемость и результативность рекламных кампаний. Эти сервисы предоставляет Google Ireland Limited.</p>
+<ul>
+    <li><strong>Аналитические cookie</strong> — количество визитов, просмотренные страницы, время на сайте, приблизительный регион, тип устройства и браузер</li>
+    <li><strong>Рекламные cookie</strong> — какая рекламная кампания привела вас на сайт и завершился ли визит переходом в Google Play</li>
+</ul>
+<p>Эти cookie устанавливаются <strong>только после вашего согласия</strong> в баннере, который показывается при первом визите. До этого момента режим согласия Google (Consent Mode) держит всё хранилище закрытым: на вашем устройстве ничего не записывается и не читается, тег передаёт только обезличенные пинги. Если вы откажетесь, сайт продолжит работать в полном объёме.</p>
+<p>Правовое основание — ваше согласие (ст. 6(1)(a) GDPR). Отозвать его можно в любой момент, очистив данные сайта в настройках браузера, — при следующем визите баннер появится снова. Данные веб-аналитики хранятся до 14 месяцев.</p>
+<p>Для других целей cookie не используются: на сайте нет учётных записей, сторонней рекламы и отслеживания за пределами двух названных сервисов.</p>
+
 <h2>11. Изменения в Политике</h2>
 <p>Мы оставляем за собой право обновлять настоящую Политику конфиденциальности. Об изменениях мы уведомим через Приложение или по электронной почте. Рекомендуем периодически просматривать данную страницу.</p>
 
@@ -243,6 +254,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie consent. Hidden until js/analytics.js decides it is needed:
+         no Google tag configured or a stored choice means it never appears. -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite"
+         aria-label="Согласие на cookie" hidden>
+        <div class="cookie-banner-inner">
+            <p class="cookie-banner-text">
+                Мы используем cookie Google Analytics и Google Ads, чтобы видеть, как работает сайт и какая реклама приводит посетителей. До вашего согласия на устройстве ничего не сохраняется.
+                <a href="/privacy.html">Политика конфиденциальности</a>
+            </p>
+            <div class="cookie-banner-actions">
+                <button type="button" class="btn btn-secondary" id="cookieDecline">Отклонить</button>
+                <button type="button" class="btn btn-primary" id="cookieAccept">Принять</button>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/main.js"></script>

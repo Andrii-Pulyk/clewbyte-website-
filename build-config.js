@@ -2,6 +2,18 @@ module.exports = {
   siteUrl: 'https://clewbyte.com',
   defaultLang: 'en',
 
+  // Google tags. Leave an id empty to keep the site tag-free: the cookie
+  // banner and the relaxed CSP are emitted only for the ids that are set.
+  analytics: {
+    // GA4 web stream "clewbyte.com" (id 15445379251) in the profi-cad property
+    ga4Id: 'G-E7NEFNDL1N',
+    adsId: '',              // Google Ads tag, e.g. 'AW-XXXXXXXXX'
+    adsConversionLabel: '', // conversion label for the Google Play click
+  },
+
+  // Google Play listing the download buttons point to.
+  playUrl: 'https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan',
+
   pages: [
     { template: 'index.html', slug: 'index' },
     { template: 'floorisplan.html', slug: 'floorisplan' },

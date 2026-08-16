@@ -20,6 +20,14 @@
     "brand_description": "Dabudinwst Sp. z o.o. — professionelle Entwicklung mobiler Anwendungen."
   },
 
+  "cookies": {
+    "aria": "Cookie-Einwilligung",
+    "text": "Wir verwenden Cookies von Google Analytics und Google Ads, um zu sehen, wie die Website funktioniert und welche Anzeigen Besucher bringen. Vor Ihrer Zustimmung wird nichts auf Ihrem Gerät gespeichert.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "more": "Datenschutzerklärung"
+  },
+
   "index": {
     "title": "ClewByte — App-Entwicklung",
     "meta_description": "ClewByte — IT-Unternehmen für professionelle mobile Anwendungen.",
@@ -57,6 +65,10 @@
     "hero_badge_2": "Ohne Registrierung",
     "hero_badge_3": "Unter 10 MB",
     "hero_badge_4": "Kostenlos, außer Floris AI",
+    "hero_video_label": "FloorisPlan: Heizkörper auf der Wandabwicklung platzieren",
+    "hero_qr_title": "Zum Installieren scannen",
+    "hero_qr_note": "Richten Sie die Handykamera auf den Code — FloorisPlan öffnet sich bei Google Play.",
+    "hero_qr_alt": "QR-Code mit Link zu FloorisPlan bei Google Play",
 
     "workflow_title": "So läuft ein Auftrag in FloorisPlan",
     "workflow_subtitle": "Vom ersten Termin auf der Baustelle bis zum unterschriebenen Vertrag — ohne die App zu verlassen",
