@@ -7,8 +7,8 @@ module.exports = {
   analytics: {
     // GA4 web stream "clewbyte.com" (id 15445379251) in the profi-cad property
     ga4Id: 'G-E7NEFNDL1N',
-    adsId: '',              // Google Ads tag, e.g. 'AW-XXXXXXXXX'
-    adsConversionLabel: '', // conversion label for the Google Play click
+    adsId: 'AW-17993328154',                    // Google Ads account tag (449-729-1594)
+    adsConversionLabel: 'xhzCCPf5r-McEJrM8YND', // click_google_play, Outbound click, secondary action
   },
 
   // Google Play listing the download buttons point to.
