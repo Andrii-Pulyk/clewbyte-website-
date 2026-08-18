@@ -86,7 +86,9 @@ function generateCsp() {
       'https://www.googletagmanager.com',
       'https://*.google-analytics.com',
       'https://www.google.com',
-      'https://googleads.g.doubleclick.net'
+      'https://www.googleadservices.com',
+      'https://googleads.g.doubleclick.net',
+      'https://ad.doubleclick.net'
     );
     csp['connect-src'] = [
       "'self'",
@@ -95,6 +97,9 @@ function generateCsp() {
       'https://*.googletagmanager.com',
       'https://*.g.doubleclick.net',
       'https://www.google.com',
+      'https://www.googleadservices.com',
+      'https://googleads.g.doubleclick.net',
+      'https://ad.doubleclick.net',
     ];
     csp['frame-src'] = ['https://td.doubleclick.net', 'https://www.googletagmanager.com'];
   }
