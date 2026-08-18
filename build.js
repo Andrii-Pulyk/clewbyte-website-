@@ -76,19 +76,28 @@ function generateCsp() {
     'base-uri': ["'self'"],
   };
 
+  // Google's regional conversion/audience pings redirect through the
+  // visitor's local Google ccTLD under DMA/Consent Mode v2 (observed:
+  // www.google.pl) instead of www.google.com — list every ccTLD this
+  // site's languages (de, en, pl, ru) plausibly resolve to. googlesyndication
+  // is the Consent Mode measurement ("ccm/collect") ping's host.
   if (analyticsEnabled) {
+    const googleCctlds = ['com', 'pl', 'de', 'ru'].map(tld => `https://www.google.${tld}`);
+
     csp['script-src'].push(
       'https://www.googletagmanager.com',
       'https://www.googleadservices.com',
-      'https://www.google-analytics.com'
+      'https://www.google-analytics.com',
+      'https://googleads.g.doubleclick.net'
     );
     csp['img-src'].push(
       'https://www.googletagmanager.com',
       'https://*.google-analytics.com',
-      'https://www.google.com',
       'https://www.googleadservices.com',
       'https://googleads.g.doubleclick.net',
-      'https://ad.doubleclick.net'
+      'https://ad.doubleclick.net',
+      'https://pagead2.googlesyndication.com',
+      ...googleCctlds
     );
     csp['connect-src'] = [
       "'self'",
@@ -96,10 +105,11 @@ function generateCsp() {
       'https://*.analytics.google.com',
       'https://*.googletagmanager.com',
       'https://*.g.doubleclick.net',
-      'https://www.google.com',
       'https://www.googleadservices.com',
       'https://googleads.g.doubleclick.net',
       'https://ad.doubleclick.net',
+      'https://pagead2.googlesyndication.com',
+      ...googleCctlds,
     ];
     csp['frame-src'] = ['https://td.doubleclick.net', 'https://www.googletagmanager.com'];
   }
