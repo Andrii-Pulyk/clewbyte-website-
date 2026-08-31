@@ -55,12 +55,13 @@
   },
 
   "floorisplan": {
-    "title": "FloorisPlan — pomiar pomieszczeń i kosztorys budowlany",
-    "meta_description": "FloorisPlan — zmierz pomieszczenia, narysuj rzut i rozwinięcia ścian, przygotuj kosztorys robót i materiałów, wydrukuj umowę w DOCX, prowadź harmonogram prac. Aplikacja offline na Androida dla wykonawców.",
-    "badge": "Dostępna",
-    "hero_title": "FloorisPlan",
-    "hero_tagline": "Wszystko o jednym zleceniu w jednej karcie projektu: pomiar, rzut, kosztorys, umowa i harmonogram.",
+    "title": "FloorisPlan — rzut mieszkania z wymiarami w telefonie",
+    "meta_description": "Narysuj rzut mieszkania z wymiarami prosto w telefonie: podyktuj wymiary głosem albo prześlij z dalmierza laserowego, a rzut z powierzchnią narysuje się sam. Rozwinięcia ścian, kosztorys i umowa — offline na Androidzie, za darmo.",
+    "badge": "FloorisPlan — aplikacja na Androida",
+    "hero_title": "Narysuj rzut mieszkania z wymiarami",
+    "hero_tagline": "Dyktujesz wymiary głosem lub z dalmierza laserowego, a rzut z powierzchnią rysuje się sam — jeszcze na obiekcie. Kosztorys i umowa? Z tego samego pomiaru.",
     "hero_cta": "Pobierz z Google Play",
+    "hero_trust": "500+ pobrań w Google Play",
     "hero_badge_1": "Działa offline",
     "hero_badge_2": "Bez rejestracji",
     "hero_badge_3": "Poniżej 10 MB",

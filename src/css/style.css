@@ -543,6 +543,22 @@ ul {
     margin: 0 auto 36px;
 }
 
+.hero-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.hero-trust svg {
+    width: 14px;
+    height: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
 .hero-badges {
     display: flex;
     flex-wrap: wrap;
@@ -1055,7 +1071,13 @@ ul {
     }
 
     .app-hero h1 {
-        font-size: 2rem;
+        font-size: 1.85rem;
+        margin-bottom: 14px;
+    }
+
+    .app-hero .tagline {
+        font-size: 1rem;
+        margin-bottom: 24px;
     }
 
     .section {
