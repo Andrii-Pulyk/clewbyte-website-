@@ -16,8 +16,9 @@
     "navigation": "Navigation",
     "legal": "Rechtliches",
     "privacy_policy": "Datenschutzerklärung",
-    "copyright": "&copy; 2026 Dabudinwst Sp. z o.o. Alle Rechte vorbehalten.",
-    "brand_description": "Dabudinwst Sp. z o.o. — professionelle Entwicklung mobiler Anwendungen."
+    "terms": "Nutzungsbedingungen",
+    "copyright": "&copy; 2026 DABUDINWEST Sp. z o.o. Alle Rechte vorbehalten.",
+    "brand_description": "DABUDINWEST Sp. z o.o. — professionelle Entwicklung mobiler Anwendungen."
   },
 
   "cookies": {
@@ -43,7 +44,7 @@
     "product_details": "Mehr erfahren →",
     "about_title": "Über das Unternehmen",
     "about_subtitle": "Wir bauen Werkzeuge, auf die Verlass ist",
-    "about_text_1": "ClewByte ist der IT-Bereich der Dabudinwst Sp. z o.o. und auf mobile Anwendungen für Profis spezialisiert. Wir sind überzeugt: Gute Software ist einfach, zuverlässig und nützlich.",
+    "about_text_1": "ClewByte ist der IT-Bereich der DABUDINWEST Sp. z o.o. und auf mobile Anwendungen für Profis spezialisiert. Wir sind überzeugt: Gute Software ist einfach, zuverlässig und nützlich.",
     "about_text_2": "Unser Team konzentriert sich auf Werkzeuge, die echte Probleme im Arbeitsalltag von Planern, Bauleuten und Handwerkern lösen.",
     "about_text_3": "Das Unternehmen ist in Warschau, Polen, eingetragen. Wir arbeiten remote und entwickeln Produkte für den internationalen Markt.",
     "about_details_title": "Unternehmensdaten",
@@ -149,13 +150,13 @@
 
   "contact": {
     "title": "Kontakt — ClewByte",
-    "meta_description": "Kontakt zu Dabudinwst Sp. z o.o. — dem Entwickler von FloorisPlan. Kontaktdaten.",
+    "meta_description": "Kontakt zu DABUDINWEST Sp. z o.o. — dem Entwickler von FloorisPlan. Kontaktdaten.",
     "hero_title": "Nehmen Sie <span class=\"accent\">Kontakt auf</span>",
     "hero_subtitle": "Fragen oder Anregungen? Wir sind jederzeit für Sie erreichbar.",
     "email_label": "E-Mail",
     "address_label": "Adresse",
     "address_value": "Hoża 86 lok. 410<br>00-682 Warszawa, Polen",
     "details_label": "Unternehmensdaten",
-    "details_value": "Dabudinwst Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
+    "details_value": "DABUDINWEST Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
   }
 }

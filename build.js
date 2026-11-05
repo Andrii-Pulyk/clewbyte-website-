@@ -310,18 +310,13 @@ for (const page of config.pages) {
     // Canonical URL
     const canonicalUrl = getPageUrl(page.slug, page.template, lang);
 
-    // Privacy switch URL (for privacy pages)
-    let privacySwitchUrl = '';
-    if (page.slug === 'privacy') {
-      // Find the "other" language for the switch link
-      // For 2 languages, toggle to the other
-      // For 3+, link to the default lang (or the first different one)
-      const otherLang = pageLangs.length === 2
-        ? pageLangs.find(l => l !== lang)
-        : (lang === config.defaultLang ? pageLangs.find(l => l !== lang) : config.defaultLang);
-      if (otherLang) {
-        privacySwitchUrl = getOutputPath('privacy', 'privacy.html', otherLang);
-      }
+    // In-page link to the other language of a two-language content page
+    // (privacy). With 3+ languages the header dropdown does the job alone.
+    let langSwitchLink = '';
+    if (page.contentRequired && pageLangs.length === 2) {
+      const otherLang = pageLangs.find(l => l !== lang);
+      const href = getOutputPath(page.slug, page.template, otherLang);
+      langSwitchLink = `<a href="${href}" class="lang-switch fade-in">${t[page.slug].lang_switch_text}</a>`;
     }
 
     // Load page content from content files (for privacy etc.)
@@ -348,7 +343,8 @@ for (const page of config.pages) {
       _nav_floorisplan_url: navUrls.floorisplan,
       _nav_contacts_url: navUrls.contact,
       _privacy_url: getAvailablePageUrl('privacy', lang),
-      _privacy_switch_url: privacySwitchUrl,
+      _terms_url: getAvailablePageUrl('terms', lang),
+      _lang_switch_link: langSwitchLink,
       _page_content: pageContent,
     };
 
@@ -389,7 +385,7 @@ for (const page of config.pages) {
   for (const lang of languagesForPage(page)) {
     const url = getPageUrl(page.slug, page.template, lang);
     const priority = page.slug === 'index' ? '1.0'
-      : page.slug === 'privacy' ? '0.3'
+      : page.contentRequired ? '0.3'
       : '0.8';
     sitemapUrls.push(`  <url>\n    <loc>${url}</loc>\n    <priority>${priority}</priority>\n  </url>`);
   }

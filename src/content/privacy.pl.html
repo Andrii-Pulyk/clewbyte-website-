@@ -1,0 +1,172 @@
+<p>Niniejsza Polityka prywatności opisuje, w jaki sposób DABUDINWEST Sp. z o.o. (dalej „Spółka”, „my”) zbiera, wykorzystuje i chroni dane osobowe użytkowników aplikacji mobilnej FloorisPlan (dalej „Aplikacja”).</p>
+<p>Korzystając z Aplikacji, akceptujesz zasady niniejszej Polityki prywatności.</p>
+
+<h2>1. Administrator danych</h2>
+<p>Administratorem danych jest:</p>
+<p>
+    <strong>DABUDINWEST Sp. z o.o.</strong><br>
+    NIP: 1133056595<br>
+    REGON: 521795720<br>
+    Adres: Hoża 86 lok. 410, 00-682 Warszawa, Polska<br>
+    E-mail: <span class="email-obfuscated"></span>
+</p>
+
+<h2>2. Jakie dane zbieramy</h2>
+
+<h3>2.1. Dane profilu użytkownika</h3>
+<p>Użytkownik może wprowadzić w ustawieniach Aplikacji następujące dane:</p>
+<ul>
+    <li>Imię i nazwisko</li>
+    <li>Adres e-mail</li>
+    <li>Nazwa firmy</li>
+    <li>Adres firmy</li>
+    <li>Numer telefonu</li>
+</ul>
+<p>Dane te są przechowywane lokalnie na urządzeniu, w pamięci Aplikacji, i są umieszczane w eksportowanych plikach PDF i DXF. Nie są przesyłane na serwery Spółki.</p>
+
+<h3>2.2. Dane analityczne</h3>
+<p>Korzystamy z Firebase Analytics i Firebase Crashlytics, aby zbierać anonimowe dane o korzystaniu z Aplikacji i zapewnić jej stabilność:</p>
+<ul>
+    <li>Typ i model urządzenia oraz wersja systemu operacyjnego</li>
+    <li>Ustawienia języka i regionu</li>
+    <li>Działania w Aplikacji (wyświetlenia ekranów, korzystanie z funkcji)</li>
+</ul>
+
+<h3>2.3. Dane o awariach (Crashlytics)</h3>
+<p>Gdy w Aplikacji wystąpi awaria lub błąd, Firebase Crashlytics automatycznie zbiera następujące informacje:</p>
+<ul>
+    <li>Ślady stosu i informacje o wyjątkach</li>
+    <li>Identyfikator instalacji Crashlytics (unikalny UUID instancji aplikacji)</li>
+    <li>Model urządzenia, wersja systemu i orientacja ekranu</li>
+    <li>Ilość pamięci RAM i miejsca na dysku</li>
+    <li>Stan urządzenia w chwili awarii (ładowanie, praca w tle lub na pierwszym planie)</li>
+</ul>
+<p>Crashlytics nie zbiera danych osobowych pozwalających zidentyfikować użytkownika.</p>
+
+<h3>2.4. Treści użytkownika</h3>
+<p>Aplikacja przechowuje tworzone przez Ciebie dane:</p>
+<ul>
+    <li>Rzuty i pomiary</li>
+    <li>Rozwinięcia ścian</li>
+    <li>Oznaczenia punktów instalacyjnych (elektryka, woda, kanalizacja, grzejniki)</li>
+    <li>Kosztorysy, listy materiałów i kwoty płatności</li>
+    <li>Zadania, notatki i harmonogramy projektów</li>
+    <li>Zdjęcia projektów, jeśli zostały dodane przez użytkownika</li>
+</ul>
+
+<h3>2.5. Dane klienta w karcie projektu</h3>
+<p>Użytkownik może dobrowolnie dodać do karty projektu imię i nazwisko klienta, numer telefonu, adres e-mail, numer PESEL i adres zamieszkania. Dane te są przechowywane w chronionej pamięci Aplikacji na urządzeniu i służą do prowadzenia projektu, kontaktu z klientem i lokalnego tworzenia dokumentów.</p>
+<p><strong>Floris AI nie otrzymuje tych pól i nie może ich odczytać, dodać ani zmienić.</strong> Imię i nazwisko, numer telefonu, adres e-mail, PESEL i adres zamieszkania klienta nie są przesyłane do OpenRouter ani do dostawców modeli AI. Imiona i numery telefonów klientów zapisane we wpisach harmonogramu również są wyłączone z kontekstu AI.</p>
+<p>Użytkownik odpowiada za posiadanie podstawy prawnej do wprowadzenia danych innej osoby oraz za wykonanie ewentualnego obowiązku informacyjnego wobec tej osoby. Danych osobowych klientów nie należy wpisywać w swobodnym tekście zadań, notatek, nazw okresów harmonogramu ani poleceń dla Floris AI, ponieważ taki tekst może zostać przesłany do usługi AI, jak opisano w punkcie 2.7.</p>
+
+<h3>2.6. Wprowadzanie głosowe (RECORD_AUDIO)</h3>
+<p>Aplikacja prosi o uprawnienie RECORD_AUDIO na potrzeby głosowego rysowania i kosztorysowania. Rozpoznawanie mowy wykonuje systemowa usługa rozpoznawania mowy wybrana lub dostarczona przez urządzenie; w zależności od jej ustawień strumień audio może być przesyłany do dostawcy tej usługi. Aplikacja nie zapisuje nagrań audio. Użytkownik może zrezygnować z wprowadzania głosowego i korzystać z wprowadzania ręcznego.</p>
+
+<h3>2.7. Floris AI</h3>
+<p>Gdy użytkownik korzysta z Floris AI, Aplikacja wysyła do API OpenRouter (openrouter.ai) wpisane lub rozpoznane polecenie oraz kontekst roboczy bieżącego projektu potrzebny do odpowiedzi lub wykonania polecenia. Kontekst ten może obejmować nazwę projektu i adres budowy, powierzchnię, parametry pomieszczeń, pozycje kosztorysu, kwoty płatności w projekcie, zadania, notatki oraz daty, nazwy, statusy i notatki okresów harmonogramu.</p>
+<p>Bezpośrednie dane klienta z karty projektu — imię i nazwisko, numer telefonu, adres e-mail, PESEL i adres zamieszkania — nie są włączane do kontekstu AI. Imiona i numery telefonów klientów są również usuwane z danych harmonogramu przed wysłaniem. Floris AI nie ma dostępu do umów ani ich treści. Do OpenRouter nie jest wysyłany dźwięk — przesyłany jest wyłącznie rozpoznany tekst.</p>
+<p>OpenRouter przekazuje zapytanie do wybranego dostawcy modelu AI. Przetwarzanie przez OpenRouter i dostawców modeli podlega ich warunkom i politykom; szczegóły w <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Polityce prywatności OpenRouter</a>. Aplikacja nie prowadzi własnej zewnętrznej historii rozmów z AI.</p>
+
+<h3>2.8. Płatności Google Play (zakupy)</h3>
+<p>Aplikacja oferuje subskrypcje i zakupy jednorazowe przez Google Play. Dane płatnicze przetwarza Google — Aplikacja nie otrzymuje danych kart bankowych. Aplikacja otrzymuje od Google: status subskrypcji, historię zakupów i tokeny zakupów. Więcej: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Polityka Google Play</a>.</p>
+
+<h3>2.9. Dane systemowe</h3>
+<p>Aplikacja odczytuje czas instalacji, aby obliczyć okres próbny (30 dni), oraz kraj/region z ustawień regionalnych urządzenia, aby ustalić warunki dostępu.</p>
+
+<h3>2.10. Dalmierz Bluetooth</h3>
+<p>Aplikacja prosi o uprawnienia Bluetooth, aby wyszukać kompatybilny dalmierz laserowy Bluetooth i się z nim połączyć. Na starszych wersjach Androida skanowanie Bluetooth Low Energy może dodatkowo wymagać uprawnienia do lokalizacji. Aplikacja nie pobiera, nie przechowuje ani nie przesyła współrzędnych geograficznych; uprawnienie służy wyłącznie do wykrycia urządzenia pomiarowego i połączenia z nim.</p>
+
+<h3>2.11. Eksport danych i dokumenty</h3>
+<p>Eksportowane pliki i tworzone dokumenty mogą zawierać dane profilu użytkownika, informacje o projekcie oraz dane klienta wybrane do danego dokumentu. Pliki są tworzone lokalnie. Gdy użytkownik zapisuje je poza chronioną pamięcią Aplikacji lub udostępnia przez aplikację zewnętrzną, np. e-mail lub komunikator, sam wybiera odbiorcę i odpowiada za dalsze rozpowszechnianie.</p>
+
+<h3>2.12. Kopia zapasowa Androida</h3>
+<p>Jeżeli na urządzeniu włączona jest systemowa kopia zapasowa Androida, dane Aplikacji, w tym projekty, kosztorysy, zdjęcia i harmonogramy, mogą trafić do kopii zapasowej na koncie Google użytkownika i zostać przywrócone na kompatybilnym urządzeniu. Kopię zapasową wykonuje Android, a podlega ona ustawieniom konta użytkownika i zasadom Google. Użytkownik może zarządzać kopią zapasową w ustawieniach systemowych urządzenia.</p>
+
+<h2>3. Cele przetwarzania danych</h2>
+<p>Przetwarzamy dane w następujących celach:</p>
+<ul>
+    <li>Zapewnienie i utrzymanie funkcjonalności Aplikacji</li>
+    <li>Analiza korzystania i ulepszanie Aplikacji</li>
+    <li>Wykrywanie i usuwanie błędów technicznych</li>
+    <li>Obsługa zakupów i subskrypcji przez Google Play</li>
+    <li>Komunikacja z użytkownikami (wsparcie, aktualizacje)</li>
+    <li>Wypełnianie obowiązków prawnych</li>
+</ul>
+
+<h2>4. Podstawy prawne przetwarzania</h2>
+<p>Dane osobowe przetwarzamy zgodnie z RODO na następujących podstawach:</p>
+<ul>
+    <li><strong>Zgoda (art. 6 ust. 1 lit. a RODO)</strong> — w zakresie analityki</li>
+    <li><strong>Wykonanie umowy (art. 6 ust. 1 lit. b RODO)</strong> — w zakresie świadczenia usług, wprowadzania głosowego i obsługi zakupów</li>
+    <li><strong>Prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO)</strong> — w zakresie ulepszania Aplikacji i zapewnienia bezpieczeństwa</li>
+</ul>
+
+<h2>5. Przekazywanie danych podmiotom trzecim</h2>
+<p>Możemy przekazywać dane następującym kategoriom odbiorców:</p>
+<ul>
+    <li><strong>Google LLC</strong> — w ramach korzystania z Firebase Analytics, Firebase Crashlytics, płatności Google Play i systemowej kopii zapasowej Androida, a także do rozpoznawania mowy, gdy na urządzeniu wybrano usługę Google (serwery mogą znajdować się poza EOG; przekazywanie odbywa się z zastosowaniem odpowiednich mechanizmów międzynarodowego transferu danych)</li>
+    <li><strong>Dostawca systemowej usługi rozpoznawania mowy na urządzeniu</strong> — do przetwarzania dźwięku wyłącznie podczas wprowadzania głosowego, gdy na urządzeniu wybrano dostawcę innego niż Google</li>
+    <li><strong>OpenRouter, Inc. i wybrani dostawcy modeli AI</strong> — do obsługi zapytań Floris AI. Przesyłane są polecenie użytkownika i kontekst roboczy projektu opisany w punkcie 2.7. Bezpośrednie dane klienta z kart projektów i dane kontaktowe klientów z harmonogramów nie są przesyłane. Zobacz <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Politykę prywatności OpenRouter</a></li>
+    <li><strong>Organy państwowe</strong> — w przypadkach przewidzianych prawem</li>
+</ul>
+<p>Nie sprzedajemy Twoich danych osobowych podmiotom trzecim.</p>
+
+<h2>6. Okres przechowywania danych</h2>
+<p>Przechowujemy dane osobowe tak długo, jak jest to niezbędne do celów opisanych w niniejszej Polityce:</p>
+<ul>
+    <li>Dane profilu, projektów i kart klientów — przechowywane lokalnie do czasu usunięcia odpowiednich danych przez użytkownika, wyczyszczenia danych Aplikacji lub jej odinstalowania; kopie mogą pozostać w systemowej kopii zapasowej Androida, jak opisano w punkcie 2.12</li>
+    <li>Treść zapytań AI — przetwarzana przez OpenRouter i wybranego dostawcę modelu zgodnie z ich ustawieniami i zasadami przechowywania</li>
+    <li>Dane analityczne — do 26 miesięcy (domyślne ustawienia Firebase Analytics)</li>
+    <li>Dane o awariach (Crashlytics) — do 90 dni</li>
+    <li>Dane zakupów — zgodnie z zasadami Google Play</li>
+</ul>
+
+<h2>7. Twoje prawa</h2>
+<p>Zgodnie z RODO przysługują Ci następujące prawa:</p>
+<ul>
+    <li><strong>Prawo dostępu</strong> — do uzyskania informacji o przetwarzanych przez nas danych</li>
+    <li><strong>Prawo do sprostowania</strong> — do poprawienia nieprawidłowych lub niekompletnych danych</li>
+    <li><strong>Prawo do usunięcia danych</strong> — możesz usunąć klienta lub pojedynczy projekt w Aplikacji albo wszystkie dane lokalne, czyszcząc dane Aplikacji lub ją odinstalowując; kopiami zapasowymi zarządza się w ustawieniach Androida i konta Google</li>
+    <li><strong>Prawo do ograniczenia przetwarzania</strong> — do ograniczenia przetwarzania danych</li>
+    <li><strong>Prawo do przenoszenia danych</strong> — do otrzymania danych w formacie nadającym się do odczytu maszynowego</li>
+    <li><strong>Prawo sprzeciwu</strong> — wobec przetwarzania opartego na prawnie uzasadnionym interesie</li>
+    <li><strong>Prawo do wycofania zgody</strong> — w dowolnym momencie, w odniesieniu do wcześniej udzielonej zgody</li>
+</ul>
+<p>Aby skorzystać ze swoich praw, napisz do nas: <span class="email-obfuscated"></span></p>
+
+<h2>8. Bezpieczeństwo danych</h2>
+<p>Stosujemy środki techniczne i organizacyjne chroniące dane osobowe przed nieuprawnionym dostępem, zmianą, ujawnieniem lub zniszczeniem. Obejmują one:</p>
+<ul>
+    <li>Szyfrowanie danych w trakcie przesyłania (TLS/SSL)</li>
+    <li>Przechowywanie danych lokalnych w chronionej pamięci Aplikacji, dostępnej wyłącznie dla niej (Android App Sandbox)</li>
+    <li>Ograniczony dostęp do danych osobowych</li>
+</ul>
+
+<h2>9. Dane dzieci</h2>
+<p>Aplikacja nie jest przeznaczona dla osób poniżej 16 roku życia. Nie zbieramy świadomie danych dzieci. Jeżeli dowiesz się, że dziecko przekazało nam swoje dane, skontaktuj się z nami, abyśmy mogli je usunąć.</p>
+
+<h2>10. Pliki cookie i podobne technologie</h2>
+<p>Aplikacja może korzystać z podobnych technologii (Firebase SDK, Firebase Crashlytics SDK, identyfikatory urządzenia), aby zapewnić prawidłowe działanie analityki i raportowania awarii. Możesz zarządzać tymi ustawieniami w parametrach urządzenia.</p>
+
+<h3>10.1. Pliki cookie na stronie clewbyte.com</h3>
+<p>Strona korzysta z Google Analytics 4 i tagu Google Ads, aby mierzyć ruch w witrynie i skuteczność naszych kampanii reklamowych. Usługi te świadczy Google Ireland Limited.</p>
+<ul>
+    <li><strong>Analityczne pliki cookie</strong> — liczba wizyt, wyświetlone strony, czas spędzony w witrynie, przybliżony region, typ urządzenia i przeglądarki</li>
+    <li><strong>Reklamowe pliki cookie</strong> — która kampania reklamowa przyprowadziła Cię na stronę i czy wizyta zakończyła się przejściem do Google Play</li>
+</ul>
+<p>Te pliki cookie są zapisywane <strong>dopiero po ich zaakceptowaniu</strong> w banerze wyświetlanym przy pierwszej wizycie. Do tego czasu tryb zgody Google (Consent Mode) blokuje cały zapis: nic nie jest zapisywane na Twoim urządzeniu ani z niego odczytywane, a tag przesyła wyłącznie anonimowe sygnały, które nie pozwalają Cię zidentyfikować. Jeżeli odmówisz, strona nadal działa w pełni.</p>
+<p>Podstawą prawną jest Twoja zgoda (art. 6 ust. 1 lit. a RODO). Możesz ją wycofać w dowolnym momencie, usuwając dane tej witryny w ustawieniach przeglądarki — przy następnej wizycie baner pojawi się ponownie. Dane analityczne witryny są przechowywane do 14 miesięcy.</p>
+<p>Pliki cookie nie są używane w żadnym innym celu: strona nie ma kont użytkowników, reklam podmiotów trzecich ani śledzenia poza dwiema wymienionymi usługami.</p>
+
+<h2>11. Zmiany Polityki</h2>
+<p>Zastrzegamy sobie prawo do aktualizowania niniejszej Polityki prywatności. O zmianach poinformujemy w Aplikacji lub e-mailem. Zalecamy okresowe zapoznawanie się z tą stroną.</p>
+
+<h2>12. Kontakt</h2>
+<p>W razie pytań dotyczących niniejszej Polityki prywatności skontaktuj się z nami:</p>
+<p>
+    <strong>DABUDINWEST Sp. z o.o.</strong><br>
+    Adres: Hoża 86 lok. 410, 00-682 Warszawa, Polska<br>
+    E-mail: <span class="email-obfuscated"></span><br>
+    Strona aplikacji w Google Play: <a href="https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan" target="_blank" rel="noopener noreferrer">https://play.google.com/store/apps/details?id=com.clewbyte.floorisplan</a>
+</p>
+<p>Masz również prawo wnieść skargę do organu nadzorczego — Prezesa Urzędu Ochrony Danych Osobowych (UODO), ul. Stawki 2, 00-193 Warszawa, Polska.</p>

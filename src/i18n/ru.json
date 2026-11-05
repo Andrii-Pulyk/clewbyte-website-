@@ -16,8 +16,9 @@
     "navigation": "Навигация",
     "legal": "Правовая информация",
     "privacy_policy": "Политика конфиденциальности",
-    "copyright": "&copy; 2026 Dabudinwst Sp. z o.o. Все права защищены.",
-    "brand_description": "Dabudinwst Sp. z o.o. — разработка профессиональных мобильных приложений."
+    "terms": "Условия использования",
+    "copyright": "&copy; 2026 DABUDINWEST Sp. z o.o. Все права защищены.",
+    "brand_description": "DABUDINWEST Sp. z o.o. — разработка профессиональных мобильных приложений."
   },
 
   "cookies": {
@@ -43,7 +44,7 @@
     "product_details": "Подробнее →",
     "about_title": "О компании",
     "about_subtitle": "Мы создаём инструменты, на которые можно положиться",
-    "about_text_1": "ClewByte — IT-подразделение компании Dabudinwst Sp. z o.o., специализирующееся на разработке мобильных приложений для профессионалов. Мы верим, что хорошее программное обеспечение должно быть простым, надёжным и полезным.",
+    "about_text_1": "ClewByte — IT-подразделение компании DABUDINWEST Sp. z o.o., специализирующееся на разработке мобильных приложений для профессионалов. Мы верим, что хорошее программное обеспечение должно быть простым, надёжным и полезным.",
     "about_text_2": "Наша команда фокусируется на создании инструментов, которые решают реальные задачи в повседневной работе дизайнеров, строителей и мастеров.",
     "about_text_3": "Компания зарегистрирована в Варшаве, Польша. Мы работаем удалённо и создаём продукты для международного рынка.",
     "about_details_title": "Реквизиты",
@@ -149,21 +150,28 @@
 
   "contact": {
     "title": "Контакты — ClewByte",
-    "meta_description": "Свяжитесь с Dabudinwst Sp. z o.o. — разработчиком FloorisPlan. Контактные данные.",
+    "meta_description": "Свяжитесь с DABUDINWEST Sp. z o.o. — разработчиком FloorisPlan. Контактные данные.",
     "hero_title": "Свяжитесь <span class=\"accent\">с нами</span>",
     "hero_subtitle": "Есть вопросы или предложения? Мы всегда открыты для общения.",
     "email_label": "Email",
     "address_label": "Адрес",
     "address_value": "Hoża 86 lok. 410<br>00-682 Warszawa, Polska",
     "details_label": "Реквизиты",
-    "details_value": "Dabudinwst Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
+    "details_value": "DABUDINWEST Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
   },
 
   "privacy": {
     "title": "Политика конфиденциальности — FloorisPlan",
-    "meta_description": "Политика конфиденциальности приложения FloorisPlan — Dabudinwst Sp. z o.o.",
+    "meta_description": "Политика конфиденциальности приложения FloorisPlan — DABUDINWEST Sp. z o.o.",
     "h1": "Политика конфиденциальности",
     "lang_switch_text": "English version →",
-    "last_updated": "Последнее обновление: 16 августа 2026 г."
+    "last_updated": "Последнее обновление: 5 ноября 2026 г."
+  },
+
+  "terms": {
+    "title": "Условия использования — FloorisPlan",
+    "meta_description": "Условия использования приложения FloorisPlan — DABUDINWEST Sp. z o.o.",
+    "h1": "Условия использования",
+    "last_updated": "Последнее обновление: 5 ноября 2026 г."
   }
 }

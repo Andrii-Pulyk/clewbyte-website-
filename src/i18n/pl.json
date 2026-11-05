@@ -16,8 +16,9 @@
     "navigation": "Nawigacja",
     "legal": "Informacje prawne",
     "privacy_policy": "Polityka prywatności",
-    "copyright": "&copy; 2026 Dabudinwst Sp. z o.o. Wszelkie prawa zastrzeżone.",
-    "brand_description": "Dabudinwst Sp. z o.o. — profesjonalne tworzenie aplikacji mobilnych."
+    "terms": "Regulamin",
+    "copyright": "&copy; 2026 DABUDINWEST Sp. z o.o. Wszelkie prawa zastrzeżone.",
+    "brand_description": "DABUDINWEST Sp. z o.o. — profesjonalne tworzenie aplikacji mobilnych."
   },
 
   "cookies": {
@@ -43,7 +44,7 @@
     "product_details": "Dowiedz się więcej →",
     "about_title": "O firmie",
     "about_subtitle": "Tworzymy narzędzia, na których można polegać",
-    "about_text_1": "ClewByte to dział IT spółki Dabudinwst Sp. z o.o., specjalizujący się w tworzeniu aplikacji mobilnych dla profesjonalistów. Wierzymy, że dobre oprogramowanie powinno być proste, niezawodne i przydatne.",
+    "about_text_1": "ClewByte to dział IT spółki DABUDINWEST Sp. z o.o., specjalizujący się w tworzeniu aplikacji mobilnych dla profesjonalistów. Wierzymy, że dobre oprogramowanie powinno być proste, niezawodne i przydatne.",
     "about_text_2": "Nasz zespół skupia się na narzędziach, które rozwiązują realne problemy w codziennej pracy projektantów, budowlańców i fachowców.",
     "about_text_3": "Firma jest zarejestrowana w Warszawie. Pracujemy zdalnie i tworzymy produkty na rynek międzynarodowy.",
     "about_details_title": "Dane firmy",
@@ -149,13 +150,27 @@
 
   "contact": {
     "title": "Kontakt — ClewByte",
-    "meta_description": "Kontakt z Dabudinwst Sp. z o.o. — twórcą aplikacji FloorisPlan. Dane kontaktowe.",
+    "meta_description": "Kontakt z DABUDINWEST Sp. z o.o. — twórcą aplikacji FloorisPlan. Dane kontaktowe.",
     "hero_title": "Skontaktuj <span class=\"accent\">się z nami</span>",
     "hero_subtitle": "Masz pytania albo sugestie? Zawsze jesteśmy otwarci na kontakt.",
     "email_label": "E-mail",
     "address_label": "Adres",
     "address_value": "Hoża 86 lok. 410<br>00-682 Warszawa, Polska",
     "details_label": "Dane firmy",
-    "details_value": "Dabudinwst Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
+    "details_value": "DABUDINWEST Sp. z o.o.<br>NIP: 1133056595<br>REGON: 521795720<br>DUNS: 674538122"
+  },
+
+  "terms": {
+    "title": "Regulamin — FloorisPlan",
+    "meta_description": "Regulamin aplikacji FloorisPlan — DABUDINWEST Sp. z o.o.",
+    "h1": "Regulamin",
+    "last_updated": "Ostatnia aktualizacja: 5 listopada 2026 r."
+  },
+
+  "privacy": {
+    "title": "Polityka prywatności — FloorisPlan",
+    "meta_description": "Polityka prywatności aplikacji FloorisPlan — DABUDINWEST Sp. z o.o.",
+    "h1": "Polityka prywatności",
+    "last_updated": "Ostatnia aktualizacja: 5 listopada 2026 r."
   }
 }

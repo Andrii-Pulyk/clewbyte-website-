@@ -21,6 +21,7 @@ module.exports = {
     // contentRequired: page body comes from src/content/{slug}.{lang}.html,
     // so the page is generated only for languages that have such a file.
     { template: 'privacy.html', slug: 'privacy', contentRequired: true },
+    { template: 'terms.html', slug: 'terms', contentRequired: true },
   ],
 
   // Override default URL pattern for specific page+lang combos
