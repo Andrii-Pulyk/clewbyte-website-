@@ -77,13 +77,15 @@
 </ul>
 <p>Dane te są przechowywane lokalnie na urządzeniu, w pamięci Aplikacji, i są umieszczane w eksportowanych plikach PDF i DXF. Nie są przesyłane na serwery Spółki.</p>
 
-<h3>2.2. Dane analityczne</h3>
-<p>Korzystamy z Firebase Analytics i Firebase Crashlytics, aby zbierać anonimowe dane o korzystaniu z Aplikacji i zapewnić jej stabilność:</p>
+<h3>2.2. Statystyki użytkowania (Firebase Analytics)</h3>
+<p>Statystyki użytkowania są zbierane wyłącznie za Twoją zgodą: na ekranie wyświetlanym przy pierwszym uruchomieniu Aplikacji albo później w Ustawieniach → „Udostępniaj statystyki użytkowania”. Domyślnie przełącznik jest wyłączony. Za Twoją zgodą Firebase Analytics zbiera:</p>
 <ul>
-    <li>Typ i model urządzenia oraz wersja systemu operacyjnego</li>
+    <li>Typ i model urządzenia oraz wersję systemu operacyjnego</li>
     <li>Ustawienia języka i regionu</li>
     <li>Działania w Aplikacji (wyświetlenia ekranów, korzystanie z funkcji)</li>
+    <li>Analityczny identyfikator instalacji aplikacji (app instance ID)</li>
 </ul>
+<p>Statystyki te nie są powiązane z Twoim imieniem i nazwiskiem, Twoimi projektami ani danymi Twoich klientów. Aplikacja nie zbiera identyfikatora reklamowego urządzenia. Dopóki nie wyrazisz zgody, Firebase Analytics niczego nie zapisuje ani nie wysyła; po wycofaniu zgody dane analityczne pozostające jeszcze na urządzeniu są usuwane.</p>
 
 <h3>2.3. Dane o awariach (Crashlytics)</h3>
 <p>Gdy w Aplikacji wystąpi awaria lub błąd, Firebase Crashlytics automatycznie zbiera następujące informacje:</p>
@@ -116,9 +118,19 @@
 <p>Aplikacja prosi o uprawnienie RECORD_AUDIO na potrzeby głosowego rysowania i kosztorysowania. Rozpoznawanie mowy wykonuje systemowa usługa rozpoznawania mowy wybrana lub dostarczona przez urządzenie; w zależności od jej ustawień strumień audio może być przesyłany do dostawcy tej usługi. Aplikacja nie zapisuje nagrań audio. Użytkownik może zrezygnować z wprowadzania głosowego i korzystać z wprowadzania ręcznego.</p>
 
 <h3>2.7. Floris AI</h3>
-<p>Gdy użytkownik korzysta z Floris AI, Aplikacja wysyła do API OpenRouter (openrouter.ai) wpisane lub rozpoznane polecenie oraz kontekst roboczy bieżącego projektu potrzebny do odpowiedzi lub wykonania polecenia. Kontekst ten może obejmować nazwę projektu i adres budowy, powierzchnię, parametry pomieszczeń, pozycje kosztorysu, kwoty płatności w projekcie, zadania, notatki oraz daty, nazwy, statusy i notatki okresów harmonogramu.</p>
-<p>Bezpośrednie dane klienta z karty projektu — imię i nazwisko, numer telefonu, adres e-mail, PESEL i adres zamieszkania — nie są włączane do kontekstu AI. Imiona i numery telefonów klientów są również usuwane z danych harmonogramu przed wysłaniem. Floris AI nie ma dostępu do umów ani ich treści. Do OpenRouter nie jest wysyłany dźwięk — przesyłany jest wyłącznie rozpoznany tekst.</p>
-<p>OpenRouter przekazuje zapytanie do wybranego dostawcy modelu AI. Przetwarzanie przez OpenRouter i dostawców modeli podlega ich warunkom i politykom; szczegóły w <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Polityce prywatności OpenRouter</a>. Aplikacja nie prowadzi własnej zewnętrznej historii rozmów z AI.</p>
+<p>Gdy korzystasz z Floris AI, Aplikacja wysyła do API OpenRouter (openrouter.ai) to, czego Floris potrzebuje, aby odpowiedzieć na zapytanie lub je wykonać:</p>
+<ul>
+    <li>wpisane lub rozpoznane polecenie oraz ostatnie wiadomości tej samej rozmowy;</li>
+    <li>dane robocze otwartego projektu: nazwę, numer i adres budowy, powierzchnię, pomieszczenia i ich wymiary, pozycje i ceny kosztorysu, kwoty płatności i harmonogram płatności, zadania, notatki oraz daty, nazwy, statusy i notatki okresów w kalendarzu;</li>
+    <li>krótki przegląd Twoich pozostałych projektów i kalendarza: nazwy, numery, adresy budów, kwoty kosztorysu, zapłacone i pozostałe, otwarte zadania i okresy kalendarza;</li>
+    <li>Twój katalog robót i materiałów (nazwy, kategorie, jednostki, ceny);</li>
+    <li>Twój własny profil, aby Floris dopasowywał odpowiedzi do Twojej pracy: imię i nazwisko, nazwę firmy, usługi, obszary pracy, staż, tekst „o mnie”, zwykły termin płatności w umowach oraz Twój status VAT;</li>
+    <li>fakty, które poprosiłeś Floris zapamiętać; możesz je zobaczyć, zmienić i usunąć w Ustawieniach → „Co pamięta Floris”;</li>
+    <li>ustawienia umowy projektu: numer i miejsce umowy oraz informację, czy dokument umowy istnieje. Floris może na Twoją prośbę utworzyć dokument umowy, ale nie otrzymuje jego treści;</li>
+    <li>tam, gdzie w Aplikacji dostępne są faktury: projekt faktury (pozycje, daty, kwoty) oraz numery, daty, kwoty i statusy wystawionych faktur, bez danych nabywcy.</li>
+</ul>
+<p><strong>Floris AI nie otrzymuje danych klientów ani kontrahentów.</strong> Imiona i nazwiska, numery telefonów, adresy e-mail, adresy zamieszkania, PESEL i NIP z kart klientów, a także imiona i numery telefonów klientów zapisane w okresach kalendarza, nigdy nie są przesyłane do OpenRouter ani do dostawców modeli AI, a Floris nie może ich odczytać, dodać ani zmienić. Nie są przesyłane dźwięk ani zdjęcia; z polecenia głosowego przesyłany jest wyłącznie rozpoznany tekst.</p>
+<p>OpenRouter przekazuje zapytanie do wybranego dostawcy modelu AI. Przetwarzanie przez OpenRouter i dostawców modeli podlega ich warunkom i politykom; szczegóły w <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Polityce prywatności OpenRouter</a>. Historia rozmów i pamięć Floris są przechowywane wyłącznie na Twoim urządzeniu; Spółka nie przechowuje ich na własnych serwerach.</p>
 
 <h3>2.8. Płatności Google Play (zakupy)</h3>
 <p>Aplikacja oferuje subskrypcje i zakupy jednorazowe przez Google Play. Dane płatnicze przetwarza Google — Aplikacja nie otrzymuje danych kart bankowych. Aplikacja otrzymuje od Google: status subskrypcji, historię zakupów i tokeny zakupów. Więcej: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Polityka Google Play</a>.</p>
@@ -159,7 +171,7 @@
 <ul>
     <li><strong>Google LLC</strong> — w ramach korzystania z Firebase Analytics, Firebase Crashlytics, płatności Google Play i systemowej kopii zapasowej Androida, a także do rozpoznawania mowy, gdy na urządzeniu wybrano usługę Google (serwery mogą znajdować się poza EOG; przekazywanie odbywa się z zastosowaniem odpowiednich mechanizmów międzynarodowego transferu danych)</li>
     <li><strong>Dostawca systemowej usługi rozpoznawania mowy na urządzeniu</strong> — do przetwarzania dźwięku wyłącznie podczas wprowadzania głosowego, gdy na urządzeniu wybrano dostawcę innego niż Google</li>
-    <li><strong>OpenRouter, Inc. i wybrani dostawcy modeli AI</strong> — do obsługi zapytań Floris AI. Przesyłane są polecenie użytkownika i kontekst roboczy projektu opisany w punkcie 2.7. Bezpośrednie dane klienta z kart projektów i dane kontaktowe klientów z harmonogramów nie są przesyłane. Zobacz <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Politykę prywatności OpenRouter</a></li>
+    <li><strong>OpenRouter, Inc. i wybrani dostawcy modeli AI</strong> — do obsługi zapytań Floris AI: Twoje polecenie i dane opisane w punkcie 2.7, w tym Twój własny profil i fakty, które pamięta Floris. Dane klientów i kontrahentów nie są przesyłane. Zobacz <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Politykę prywatności OpenRouter</a></li>
     <li><strong>Organy państwowe</strong> — w przypadkach przewidzianych prawem</li>
 </ul>
 <p>Nie sprzedajemy Twoich danych osobowych podmiotom trzecim.</p>
@@ -169,6 +181,7 @@
 <ul>
     <li>Dane profilu, projektów i kart klientów — przechowywane lokalnie do czasu usunięcia odpowiednich danych przez użytkownika, wyczyszczenia danych Aplikacji lub jej odinstalowania; kopie mogą pozostać w systemowej kopii zapasowej Androida, jak opisano w punkcie 2.12</li>
     <li>Treść zapytań AI — przetwarzana przez OpenRouter i wybranego dostawcę modelu zgodnie z ich ustawieniami i zasadami przechowywania</li>
+    <li>Historia rozmów z Floris — na urządzeniu, dopóki nie wyczyścisz danych Aplikacji lub jej nie odinstalujesz; pamięć Floris — dopóki nie usuniesz faktów w Ustawieniach → „Co pamięta Floris”, nie wyczyścisz danych Aplikacji lub jej nie odinstalujesz; może też trafić do systemowej kopii zapasowej Androida, jak opisano w punkcie 2.12</li>
     <li>Dane analityczne — do 26 miesięcy (domyślne ustawienia Firebase Analytics)</li>
     <li>Dane o awariach (Crashlytics) — do 90 dni</li>
     <li>Dane zakupów — zgodnie z zasadami Google Play</li>
@@ -183,7 +196,7 @@
     <li><strong>Prawo do ograniczenia przetwarzania</strong> — do ograniczenia przetwarzania danych</li>
     <li><strong>Prawo do przenoszenia danych</strong> — do otrzymania danych w formacie nadającym się do odczytu maszynowego</li>
     <li><strong>Prawo sprzeciwu</strong> — wobec przetwarzania opartego na prawnie uzasadnionym interesie</li>
-    <li><strong>Prawo do wycofania zgody</strong> — w dowolnym momencie, w odniesieniu do wcześniej udzielonej zgody</li>
+    <li><strong>Prawo do wycofania zgody</strong> — w dowolnym momencie; w przypadku statystyk użytkowania wyłącz Ustawienia → „Udostępniaj statystyki użytkowania”</li>
 </ul>
 <p>Aby skorzystać ze swoich praw, napisz do nas: <span class="email-obfuscated"></span></p>
 
@@ -199,7 +212,7 @@
 <p>Aplikacja nie jest przeznaczona dla osób poniżej 16 roku życia. Nie zbieramy świadomie danych dzieci. Jeżeli dowiesz się, że dziecko przekazało nam swoje dane, skontaktuj się z nami, abyśmy mogli je usunąć.</p>
 
 <h2>10. Pliki cookie i podobne technologie</h2>
-<p>Aplikacja może korzystać z podobnych technologii (Firebase SDK, Firebase Crashlytics SDK, identyfikatory urządzenia), aby zapewnić prawidłowe działanie analityki i raportowania awarii. Możesz zarządzać tymi ustawieniami w parametrach urządzenia.</p>
+<p>Aplikacja nie używa plików cookie. Firebase Analytics zapisuje na urządzeniu identyfikator analityczny dopiero po wyrażeniu przez Ciebie zgody na statystyki użytkowania (punkt 2.2); swój wybór możesz zmienić w dowolnym momencie w Ustawieniach → „Udostępniaj statystyki użytkowania”. Firebase Crashlytics zapisuje identyfikator instalacji, aby wysyłać raporty o awariach (punkt 2.3). Aplikacja nie zbiera identyfikatora reklamowego urządzenia.</p>
 
 <h3>10.1. Pliki cookie na stronie clewbyte.com</h3>
 <p>Strona korzysta z Google Analytics 4 i tagu Google Ads, aby mierzyć ruch w witrynie i skuteczność naszych kampanii reklamowych. Usługi te świadczy Google Ireland Limited.</p>

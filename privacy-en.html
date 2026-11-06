@@ -77,13 +77,15 @@
 </ul>
 <p>This data is stored locally on the device within the Application's storage and is included in exported PDF and DXF files. The data is not transmitted to the Company's servers.</p>
 
-<h3>2.2. Analytics Data</h3>
-<p>We use Firebase Analytics and Firebase Crashlytics to collect anonymous data about the use of the Application and to ensure its stability:</p>
+<h3>2.2. Usage Statistics (Firebase Analytics)</h3>
+<p>Usage statistics are collected only if you allow them: in the screen shown when you first start the Application, or later in Settings → "Share usage statistics". The switch is off by default. With your permission, Firebase Analytics collects:</p>
 <ul>
     <li>Device type, model, and operating system version</li>
     <li>Language and regional settings</li>
     <li>Actions within the Application (screen views, feature usage)</li>
+    <li>An analytics identifier of the app installation (app instance ID)</li>
 </ul>
+<p>These statistics are not linked to your name, your projects, or your clients' data. The Application does not collect the device's advertising ID. Until you allow statistics, Firebase Analytics stores and sends nothing; when you withdraw your permission, the analytics data still on the device is deleted.</p>
 
 <h3>2.3. Crash Data (Crashlytics)</h3>
 <p>Firebase Crashlytics automatically collects the following information when a crash or error occurs in the Application:</p>
@@ -116,9 +118,19 @@
 <p>The Application requests the RECORD_AUDIO permission for voice-controlled drawing and estimating. Recognition is performed by the system speech recognition service selected or provided by the device; depending on its settings, the audio stream may be transmitted to that service provider. The Application does not save audio recordings. The user can opt out of voice input and use manual input instead.</p>
 
 <h3>2.7. Floris AI</h3>
-<p>When a user interacts with Floris AI, the Application sends the typed or transcribed command and the working context of the current project needed to answer or carry out the command to OpenRouter API (openrouter.ai). This context may include the project name and site address, area, room parameters, estimate items, project payment amounts, tasks, notes, and the dates, titles, statuses, and notes of schedule periods.</p>
-<p>Direct client data from the project card — name, phone number, email address, PESEL, and residential address — is not included in AI context. Client names and phone numbers are also removed from schedule data before it is sent. Floris AI has no access to contracts or their contents. No audio is sent to OpenRouter; only recognized text is transmitted.</p>
-<p>OpenRouter routes the request to a selected AI model provider. Processing by OpenRouter and model providers is governed by their terms and policies; see the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a> for details. The Application does not maintain its own external history of AI conversations.</p>
+<p>When you use Floris AI, the Application sends to the OpenRouter API (openrouter.ai) what Floris needs to answer or carry out your request:</p>
+<ul>
+    <li>your typed or recognized command and the recent messages of the same conversation;</li>
+    <li>the working data of the open project: its name, number and site address, area, rooms and their measurements, estimate items and prices, payment amounts and the payment schedule, tasks, notes, and the dates, titles, statuses and notes of calendar periods;</li>
+    <li>a short overview of your other projects and your calendar: names, numbers, site addresses, estimate, paid and remaining amounts, open tasks and calendar periods;</li>
+    <li>your catalog of works and materials (names, categories, units, prices);</li>
+    <li>your own profile, so that Floris fits its answers to your work: your name, company name, services, work areas, years of experience, your "about me" text, your usual payment term in contracts and your VAT status;</li>
+    <li>facts you asked Floris to remember; you can see, change and delete them in Settings → "What Floris remembers";</li>
+    <li>the contract settings of the project: the contract number and place, and whether the contract document exists. Floris can create the contract document at your request, but does not receive its contents;</li>
+    <li>where invoices are available in the Application: the project's invoice draft (positions, dates, amounts) and the numbers, dates, amounts and statuses of issued invoices, without the buyer's data.</li>
+</ul>
+<p><strong>Floris AI does not receive client or counterparty details.</strong> Names, phone numbers, email addresses, residential addresses, PESEL and NIP from client cards, and client names and phone numbers stored in calendar periods, are never sent to OpenRouter or AI model providers, and Floris cannot read, add or change them. No audio and no photos are sent; only the recognized text of a voice command is transmitted.</p>
+<p>OpenRouter routes the request to a selected AI model provider. Processing by OpenRouter and model providers is governed by their terms and policies; see the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a>. The conversation history and Floris's memory are stored only on your device; the Company does not keep them on its own servers.</p>
 
 <h3>2.8. Google Play Billing (Purchases)</h3>
 <p>The Application offers subscriptions and one-time purchases through Google Play. Google processes payment data — the Application does not receive bank card details. The Application receives from Google: subscription status, purchase history, and purchase tokens. Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Policy</a>.</p>
@@ -159,7 +171,7 @@
 <ul>
     <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Firebase Crashlytics, Google Play Billing, and Android system backup, and for speech recognition when a Google service is selected on the device (servers may be located outside the EEA; transfers are made using applicable international data-transfer mechanisms)</li>
     <li><strong>The provider of the device's system speech recognition service</strong> — to process audio only when voice input is used and a non-Google provider is selected on the device</li>
-    <li><strong>OpenRouter, Inc. and selected AI model providers</strong> — to process Floris AI requests. The user's command and the working project context described in Section 2.7 are transmitted. Direct client data from project cards and client contact details from schedules are not transmitted. See the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a></li>
+    <li><strong>OpenRouter, Inc. and selected AI model providers</strong> — to process Floris AI requests: your command and the data described in Section 2.7, including your own profile and the facts Floris remembers. Client and counterparty details are not transmitted. See the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a></li>
     <li><strong>Government authorities</strong> — in cases provided for by law</li>
 </ul>
 <p>We do not sell your personal data to third parties.</p>
@@ -169,6 +181,7 @@
 <ul>
     <li>User profile, project, and client-card data — stored locally until the user deletes the relevant data, clears Application data, or uninstalls the Application; copies may remain in Android system backup as described in Section 2.12</li>
     <li>AI request content — processed by OpenRouter and the selected model provider under their applicable retention settings and policies</li>
+    <li>Floris conversation history — on the device until you clear the Application data or uninstall it; Floris memory — until you delete the facts in Settings → "What Floris remembers", clear the Application data or uninstall it, and it may also be included in Android system backup as described in Section 2.12</li>
     <li>Analytics data — up to 26 months (default Firebase Analytics settings)</li>
     <li>Crash data (Crashlytics) — up to 90 days</li>
     <li>Purchase data — in accordance with Google Play policy</li>
@@ -183,7 +196,7 @@
     <li><strong>Right to restriction of processing</strong> — to restrict data processing</li>
     <li><strong>Right to data portability</strong> — to receive your data in a machine-readable format</li>
     <li><strong>Right to object</strong> — to object to data processing based on legitimate interest</li>
-    <li><strong>Right to withdraw consent</strong> — to withdraw previously given consent at any time</li>
+    <li><strong>Right to withdraw consent</strong> — at any time; for usage statistics, turn off Settings → "Share usage statistics"</li>
 </ul>
 <p>To exercise your rights, contact us at: <span class="email-obfuscated"></span></p>
 
@@ -199,7 +212,7 @@
 <p>The Application is not intended for persons under 16 years of age. We do not knowingly collect children's data. If you discover that a child has provided us with their data, please contact us to have it deleted.</p>
 
 <h2>10. Cookies and Similar Technologies</h2>
-<p>The Application may use similar technologies (Firebase SDK, Firebase Crashlytics SDK, device identifiers) to ensure proper functioning of analytics and crash reporting. You can manage these settings through your device parameters.</p>
+<p>The Application does not use cookies. Firebase Analytics stores an analytics identifier on the device only after you allow usage statistics (Section 2.2); you can change your choice at any time in Settings → "Share usage statistics". Firebase Crashlytics stores an installation identifier to send crash reports (Section 2.3). The Application does not collect the device's advertising ID.</p>
 
 <h3>10.1. Cookies on the clewbyte.com Website</h3>
 <p>The website uses Google Analytics 4 and the Google Ads tag to measure site traffic and the effectiveness of our advertising campaigns. These services are provided by Google Ireland Limited.</p>
