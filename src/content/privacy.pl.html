@@ -42,6 +42,8 @@
     <li>Model urządzenia, wersja systemu i orientacja ekranu</li>
     <li>Ilość pamięci RAM i miejsca na dysku</li>
     <li>Stan urządzenia w chwili awarii (ładowanie, praca w tle lub na pierwszym planie)</li>
+    <li>Losowy kod wsparcia utworzony przez Aplikację (na przykład K7QM-3XFA). Jest on również podawany w Twoich wiadomościach do wsparcia, abyśmy na podstawie wiadomości mogli odnaleźć raporty o awariach Twojego urządzenia</li>
+    <li>Krótki zapis tego, co działo się w Aplikacji przed awarią: otwarte ekrany, wykonane operacje i błędy (zob. punkt 2.13)</li>
 </ul>
 <p>Crashlytics nie zbiera danych osobowych pozwalających zidentyfikować użytkownika.</p>
 
@@ -94,6 +96,10 @@
 <h3>2.12. Kopia zapasowa Androida</h3>
 <p>Jeżeli na urządzeniu włączona jest systemowa kopia zapasowa Androida, dane Aplikacji, w tym projekty, kosztorysy, zdjęcia i harmonogramy, mogą trafić do kopii zapasowej na koncie Google użytkownika i zostać przywrócone na kompatybilnym urządzeniu. Kopię zapasową wykonuje Android, a podlega ona ustawieniom konta użytkownika i zasadom Google. Użytkownik może zarządzać kopią zapasową w ustawieniach systemowych urządzenia.</p>
 
+<h3>2.13. Dziennik diagnostyczny i wiadomości do wsparcia</h3>
+<p>Aplikacja prowadzi na urządzeniu dziennik diagnostyczny: wersja Aplikacji, model urządzenia, wersja Androida, język, kod wsparcia, otwierane ekrany, wykonane operacje (na przykład zapisanie projektu lub eksport PDF) oraz opisy błędów. Przed zapisaniem w dzienniku adresy e-mail, numery telefonów i inne długie numery są maskowane. Dziennik nie zawiera treści Twoich projektów, danych klientów ani rozmów z Floris AI. Zajmuje najwyżej około 512 KB, najstarsze wpisy są nadpisywane, nie trafia do kopii zapasowej Androida i jest usuwany po wyczyszczeniu danych Aplikacji lub jej odinstalowaniu.</p>
+<p>Dziennik opuszcza urządzenie tylko wtedy, gdy sam go wyślesz: jest dołączany do wiadomości otwieranej w Twojej aplikacji pocztowej po wybraniu Ustawienia → „Skontaktuj się z nami” → „Zgłoś problem”, a także można go wysłać do wybranej aplikacji przez Ustawienia → „O aplikacji” → „Wyślij dziennik”. Przed wysłaniem widzisz załącznik i możesz go usunąć. Wiadomości do wsparcia i dołączone dzienniki wykorzystujemy wyłącznie do udzielenia odpowiedzi oraz wykrywania i usuwania błędów, na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</p>
+
 <h2>3. Cele przetwarzania danych</h2>
 <p>Przetwarzamy dane w następujących celach:</p>
 <ul>
@@ -131,6 +137,7 @@
     <li>Historia rozmów z Floris — na urządzeniu, dopóki nie wyczyścisz danych Aplikacji lub jej nie odinstalujesz; pamięć Floris — dopóki nie usuniesz faktów w Ustawieniach → „Co pamięta Floris”, nie wyczyścisz danych Aplikacji lub jej nie odinstalujesz; może też trafić do systemowej kopii zapasowej Androida, jak opisano w punkcie 2.12</li>
     <li>Dane analityczne — do 26 miesięcy (domyślne ustawienia Firebase Analytics)</li>
     <li>Dane o awariach (Crashlytics) — do 90 dni</li>
+    <li>Wiadomości do wsparcia i dołączone dzienniki diagnostyczne — tak długo, jak jest to potrzebne do obsługi zgłoszenia i usunięcia błędu</li>
     <li>Dane zakupów — zgodnie z zasadami Google Play</li>
 </ul>
 
@@ -159,7 +166,7 @@
 <p>Aplikacja nie jest przeznaczona dla osób poniżej 16 roku życia. Nie zbieramy świadomie danych dzieci. Jeżeli dowiesz się, że dziecko przekazało nam swoje dane, skontaktuj się z nami, abyśmy mogli je usunąć.</p>
 
 <h2>10. Pliki cookie i podobne technologie</h2>
-<p>Aplikacja nie używa plików cookie. Firebase Analytics zapisuje na urządzeniu identyfikator analityczny dopiero po wyrażeniu przez Ciebie zgody na statystyki użytkowania (punkt 2.2); swój wybór możesz zmienić w dowolnym momencie w Ustawieniach → „Udostępniaj statystyki użytkowania”. Firebase Crashlytics zapisuje identyfikator instalacji, aby wysyłać raporty o awariach (punkt 2.3). Aplikacja nie zbiera identyfikatora reklamowego urządzenia.</p>
+<p>Aplikacja nie używa plików cookie. Firebase Analytics zapisuje na urządzeniu identyfikator analityczny dopiero po wyrażeniu przez Ciebie zgody na statystyki użytkowania (punkt 2.2); swój wybór możesz zmienić w dowolnym momencie w Ustawieniach → „Udostępniaj statystyki użytkowania”. Firebase Crashlytics zapisuje identyfikator instalacji, aby wysyłać raporty o awariach (punkt 2.3). Dziennik diagnostyczny (punkt 2.13) jest przechowywany wyłącznie na urządzeniu i opuszcza je tylko wtedy, gdy sam go wyślesz. Aplikacja nie zbiera identyfikatora reklamowego urządzenia.</p>
 
 <h3>10.1. Pliki cookie na stronie clewbyte.com</h3>
 <p>Strona korzysta z Google Analytics 4 i tagu Google Ads, aby mierzyć ruch w witrynie i skuteczność naszych kampanii reklamowych. Usługi te świadczy Google Ireland Limited.</p>
