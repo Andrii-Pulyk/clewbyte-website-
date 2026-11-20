@@ -48,7 +48,7 @@
     <main class="privacy-content container">
         <h1 class="fade-in">Polityka prywatności</h1>
         
-        <p class="last-updated fade-in">Ostatnia aktualizacja: 17 listopada 2026 r.</p>
+        <p class="last-updated fade-in">Ostatnia aktualizacja: 20 listopada 2026 r.</p>
 
         <div>
             <p>Niniejsza Polityka prywatności opisuje, w jaki sposób DABUDINWEST Sp. z o.o. (dalej „Spółka”, „my”) zbiera, wykorzystuje i chroni dane osobowe użytkowników aplikacji mobilnej FloorisPlan (dalej „Aplikacja”).</p>
@@ -112,7 +112,7 @@
 </ul>
 
 <h3>2.5. Dane klienta w karcie projektu</h3>
-<p>Użytkownik może dobrowolnie dodać do karty projektu imię i nazwisko klienta, numer telefonu, adres e-mail, numer PESEL i adres zamieszkania. Dane te są przechowywane w chronionej pamięci Aplikacji na urządzeniu i służą do prowadzenia projektu, kontaktu z klientem i lokalnego tworzenia dokumentów.</p>
+<p>Użytkownik może dobrowolnie dodać do karty projektu imię i nazwisko klienta, numer telefonu, adres e-mail, numer PESEL i adres zamieszkania. Dane te są przechowywane w chronionej pamięci Aplikacji na urządzeniu i służą do prowadzenia projektu, kontaktu z klientem i lokalnego tworzenia dokumentów. W przypadku klienta będącego firmą karta zawiera zamiast tego nazwę firmy, jej przedstawiciela, NIP i adres.</p>
 <p><strong>Floris AI nie otrzymuje tych pól i nie może ich odczytać, dodać ani zmienić.</strong> Imię i nazwisko, numer telefonu, adres e-mail, PESEL i adres zamieszkania klienta nie są przesyłane do OpenRouter ani do dostawców modeli AI. Imiona i numery telefonów klientów zapisane we wpisach harmonogramu również są wyłączone z kontekstu AI.</p>
 <p>Użytkownik odpowiada za posiadanie podstawy prawnej do wprowadzenia danych innej osoby oraz za wykonanie ewentualnego obowiązku informacyjnego wobec tej osoby. Danych osobowych klientów nie należy wpisywać w swobodnym tekście zadań, notatek, nazw okresów harmonogramu ani poleceń dla Floris AI, ponieważ taki tekst może zostać przesłany do usługi AI, jak opisano w punkcie 2.7.</p>
 
@@ -153,6 +153,9 @@
 <p>Aplikacja prowadzi na urządzeniu dziennik diagnostyczny: wersja Aplikacji, model urządzenia, wersja Androida, język, kod wsparcia, otwierane ekrany, wykonane operacje (na przykład zapisanie projektu lub eksport PDF) oraz opisy błędów. Przed zapisaniem w dzienniku adresy e-mail, numery telefonów i inne długie numery są maskowane. Dziennik nie zawiera treści Twoich projektów, danych klientów ani rozmów z Floris AI. Zajmuje najwyżej około 512 KB, najstarsze wpisy są nadpisywane, nie trafia do kopii zapasowej Androida i jest usuwany po wyczyszczeniu danych Aplikacji lub jej odinstalowaniu.</p>
 <p>Dziennik opuszcza urządzenie tylko wtedy, gdy sam go wyślesz: jest dołączany do wiadomości otwieranej w Twojej aplikacji pocztowej po wybraniu Ustawienia → „Skontaktuj się z nami” → „Zgłoś problem”, a także można go wysłać do wybranej aplikacji przez Ustawienia → „O aplikacji” → „Wyślij dziennik”. Przed wysłaniem widzisz załącznik i możesz go usunąć. Wiadomości do wsparcia i dołączone dzienniki wykorzystujemy wyłącznie do udzielenia odpowiedzi oraz wykrywania i usuwania błędów, na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</p>
 
+<h3>2.14. Wyszukiwanie firmy po NIP</h3>
+<p>Obok pola NIP (na przykład w Twoim profilu i w karcie klienta będącego firmą) znajduje się przycisk wyszukiwania. Dopiero po jego naciśnięciu Aplikacja wysyła szyfrowanym połączeniem wpisany NIP i dzisiejszą datę do publicznego Wykazu podatników VAT („białej listy”) Ministerstwa Finansów, wl-api.mf.gov.pl. Jak przy każdym połączeniu z internetem, serwer wykazu widzi też adres IP urządzenia. Wykaz zwraca publiczne dane firmy, jej nazwę i adres, które Aplikacja wpisuje do formularza; przed zapisaniem możesz je poprawić lub usunąć. Aplikacja nie wysyła żadnych innych danych, zapytanie nie jest powiązane z Tobą ani z Twoimi projektami i nie otrzymujemy go. Ministerstwo Finansów przetwarza zapytanie na własnych zasadach.</p>
+
 <h2>3. Cele przetwarzania danych</h2>
 <p>Przetwarzamy dane w następujących celach:</p>
 <ul>
@@ -178,6 +181,7 @@
     <li><strong>Google LLC</strong> — w ramach korzystania z Firebase Analytics, Firebase Crashlytics, płatności Google Play i systemowej kopii zapasowej Androida, a także do rozpoznawania mowy, gdy na urządzeniu wybrano usługę Google (serwery mogą znajdować się poza EOG; przekazywanie odbywa się z zastosowaniem odpowiednich mechanizmów międzynarodowego transferu danych)</li>
     <li><strong>Dostawca systemowej usługi rozpoznawania mowy na urządzeniu</strong> — do przetwarzania dźwięku wyłącznie podczas wprowadzania głosowego, gdy na urządzeniu wybrano dostawcę innego niż Google</li>
     <li><strong>OpenRouter, Inc. i wybrani dostawcy modeli AI</strong> — do obsługi zapytań Floris AI: Twoje polecenie i dane opisane w punkcie 2.7, w tym Twój własny profil i fakty, które pamięta Floris. Dane klientów i kontrahentów nie są przesyłane. Zobacz <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Politykę prywatności OpenRouter</a></li>
+    <li><strong>Ministerstwo Finansów</strong> — wyszukiwany numer NIP, wyłącznie po naciśnięciu przycisku wyszukiwania obok pola NIP (punkt 2.14)</li>
     <li><strong>Organy państwowe</strong> — w przypadkach przewidzianych prawem</li>
 </ul>
 <p>Nie sprzedajemy Twoich danych osobowych podmiotom trzecim.</p>

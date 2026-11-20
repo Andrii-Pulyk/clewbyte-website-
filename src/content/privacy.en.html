@@ -59,7 +59,7 @@
 </ul>
 
 <h3>2.5. Client Data in a Project Card</h3>
-<p>A user may voluntarily add their client's name, phone number, email address, PESEL national identification number, and residential address to a project card. This data is stored in the Application's protected storage on the device and is used to manage the project, contact the client, and generate documents locally.</p>
+<p>A user may voluntarily add their client's name, phone number, email address, PESEL national identification number, and residential address to a project card. This data is stored in the Application's protected storage on the device and is used to manage the project, contact the client, and generate documents locally. For a client that is a company, the card holds the company name, its representative, NIP, and address instead.</p>
 <p><strong>Floris AI does not receive these fields and cannot read, add, or modify them.</strong> The client's name, phone number, email address, PESEL, and residential address are not sent to OpenRouter or AI model providers. Client names and phone numbers stored in schedule entries are also excluded from AI context.</p>
 <p>The user is responsible for having a lawful basis to enter another person's data and for meeting any applicable duty to inform that person. Personal client data should not be entered into free-text tasks, notes, schedule period titles, or Floris AI commands, because such text may be sent to the AI service as described in Section 2.7.</p>
 
@@ -100,6 +100,9 @@
 <p>The Application keeps a diagnostic log on the device: the Application version, device model, Android version, language, the support code, the screens opened, operations performed (for example, a project saved or a PDF exported), and descriptions of errors. Before anything is written to the log, email addresses, phone numbers, and other long numbers are masked. The log does not contain the content of your projects, client data, or your conversations with Floris AI. It takes up about 512 KB at most, the oldest entries are overwritten, it is not included in Android backup, and it is deleted when you clear the Application data or uninstall it.</p>
 <p>The log leaves the device only when you send it yourself: it is attached to the letter that opens in your mail app when you choose Settings → "Contact us" → "Report a problem", and you can send it to an app of your choice with Settings → "About" → "Send log". Before sending, you see the attachment and can remove it. We use letters to support and the attached logs only to answer you and to find and fix errors, on the basis of our legitimate interest (Art. 6(1)(f) GDPR).</p>
 
+<h3>2.14. Company Lookup by NIP</h3>
+<p>Next to a NIP field (for example, in your profile and in the card of a client that is a company), the Application offers a search button. Only when you tap it, the Application sends the entered NIP and today's date over an encrypted connection to the public register of VAT taxpayers (the "white list") of the Polish Ministry of Finance, wl-api.mf.gov.pl. As with any internet request, the register's server also sees the device's IP address. The register returns the public details of the company, its name and address, which the Application fills into the form; you can correct or delete them before saving. No other data is sent, the request is not linked to you or your projects, and we do not receive it. The Ministry of Finance processes the request under its own rules.</p>
+
 <h2>3. Purposes of Data Processing</h2>
 <p>We process your data for the following purposes:</p>
 <ul>
@@ -125,6 +128,7 @@
     <li><strong>Google LLC</strong> — as part of using Firebase Analytics, Firebase Crashlytics, Google Play Billing, and Android system backup, and for speech recognition when a Google service is selected on the device (servers may be located outside the EEA; transfers are made using applicable international data-transfer mechanisms)</li>
     <li><strong>The provider of the device's system speech recognition service</strong> — to process audio only when voice input is used and a non-Google provider is selected on the device</li>
     <li><strong>OpenRouter, Inc. and selected AI model providers</strong> — to process Floris AI requests: your command and the data described in Section 2.7, including your own profile and the facts Floris remembers. Client and counterparty details are not transmitted. See the <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter Privacy Policy</a></li>
+    <li><strong>Ministry of Finance of the Republic of Poland</strong> — the NIP you look up, only when you tap search next to a NIP field (Section 2.14)</li>
     <li><strong>Government authorities</strong> — in cases provided for by law</li>
 </ul>
 <p>We do not sell your personal data to third parties.</p>
